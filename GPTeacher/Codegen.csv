@@ -1,0 +1,2644 @@
+filename,text,response
+Codegen,"In Python, write a recursive function to compute the Fibonacci sequence up to the nth term, where n is the function's argument.","def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)"
+Codegen,"How would you implement a JavaScript function that receives an array of objects with a property 'name', sorts the objects alphabetically by the 'name' property, and returns the sorted array?[{name: 'Zoe'}, {name: 'Alexander'}, {name: 'Jenny'}, {name: 'Lisa'}]","function sortObjectsByName(arr) {
+    return arr.sort((a, b) => a.name.localeCompare(b.name));
+}
+
+const sorted = sortObjectsByName([{name: 'Zoe'}, {name: 'Alexander'}, {name: 'Jenny'}, {name: 'Lisa'}]);
+console.log(sorted);"
+Codegen,Write a C program to calculate the factorial of a given integer.5,"#include <stdio.h>
+
+int factorial(int n) {
+    if (n == 0 || n == 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);}
+
+int main() {
+    int n = 5;
+    printf(""Factorial of %d is %d\n"", n, factorial(n));
+    return 0;}"
+Codegen,"What is the output of the following JavaScript code if the input string is 'openai'?function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
+console.log(reverseString('openai'));","The output will be 'ianepo', which is the reverse of the input string 'openai'."
+Codegen,"Can you create a Python script that reads a CSV file line by line and prints each row?example.csv (with content):
+Name,Age,Gender
+Alice,27,F
+Bob,34,M
+Charlie,21,M","import csv
+
+file_name = 'example.csv'
+
+with open(file_name, newline='') as csvfile:
+    reader = csv.reader(csvfile)
+    for row in reader:
+        print(', '.join(row))"
+Codegen,"Translate the following Python code to JavaScript:
+
+```
+prices = [20.2, 5.5, 1.99, 10.0, 23.9, 15.6]
+prices.sort(reverse=True)
+for price in prices:
+    print(f'$ {price:.2f}')
+```","const prices = [20.2, 5.5, 1.99, 10.0, 23.9, 15.6];
+prices.sort((a, b) => b - a);
+
+for (const price of prices) {
+    console.log(`$ ${price.toFixed(2)}`);
+}"
+Codegen,Create a function in JavaScript to detect if a string contains only unique characters.,"function hasUniqueChars(str) {
+  const charSet = new Set(str);
+  return charSet.size === str.length;
+}"
+Codegen,Write a C++ function that calculates the factorial of a given positive integer using recursion.6,"#include<iostream>
+using namespace std;
+
+int factorial(int n) {
+    if (n <= 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);}
+
+int main() {
+    int number = 6;
+    cout << ""Factorial of "" << number << "" is: "" << factorial(number) << endl;
+    return 0;}"
+Codegen,How to implement a Node.js server with Express that listens to a 'GET' request at '/users' and returns a JSON object containing a list of users?,"const express = require('express');
+const app = express();
+
+const users = [
+    { id: 1, name: 'Alice' },
+    { id: 2, name: 'Bob' },
+];
+
+app.get('/users', (req, res) => {
+    res.json(users);});
+
+const port = 3000;
+app.listen(port, () => {
+    console.log(`Server started and listening on port ${port}`);});"
+Codegen,"How would you create a helper function in PHP that converts a string to title case?""this is a sample text""","<?php
+
+function titleCase($str) {
+    $words = explode(' ', $str);
+    $result = [];
+    
+    foreach ($words as $word) {
+        $result[] = ucfirst(strtolower($word));
+    }
+    
+    return implode(' ', $result);}
+
+echo titleCase(""this is a sample text"");
+
+?>"
+Codegen,Create a Python function that takes in two lists of integers and returns a new list containing the intersection of the two given lists.,"def list_intersection(list1, list2):
+    return list(set(list1) & set(list2))"
+Codegen,"What code would you use to reverse the order of the elements in an array in Python?input: [5, 7, 3, 9, 1]","def reverse_array(arr):
+    return arr[::-1]
+
+input_array = [5, 7, 3, 9, 1]
+reversed_array = reverse_array(input_array)
+print(reversed_array)"
+Codegen,Create a Python function that receives a string and returns the count of vowels and consonants separately.,"def count_vowels_consonants(s):
+    vowels = 'aeiou'
+    consonants = 'bcdfghjklmnpqrstvwxyz'
+    vowel_count = sum(1 for c in s.lower() if c in vowels)
+    consonant_count = sum(1 for c in s.lower() if c in consonants)
+    return vowel_count, consonant_count"
+Codegen,"In JavaScript, how can you filter out only even numbers from an array?[1, 2, 3, 4, 5, 6, 7, 8, 9]","function filterEvenNumbers(arr) {
+    return arr.filter(num => num % 2 === 0);}
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const evenNumbers = filterEvenNumbers(arr);
+console.log(evenNumbers);"
+Codegen,"Design a C++ function that accepts a vector of integers and returns the average value of its elements.{5, 8, 10, 20}","#include <iostream>
+#include <vector>
+
+double average(const std::vector<int>& v) {
+    double sum = 0;
+    for (int num : v) {
+        sum += num;
+    }
+    return sum / v.size();}
+
+int main() {
+    std::vector<int> input{5, 8, 10, 20};
+    double result = average(input);
+    std::cout << ""Average: "" << result << std::endl;}"
+Codegen,How would you implement a recursive function in C++ that calculates the Fibonacci sequence for a given index?Calculate the 10th number in the Fibonacci sequence.,"#include<iostream>
+
+using namespace std;
+
+int fibonacci(int n) {
+  if (n <=0) return 0;
+  if (n == 1) return 1;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main() {
+  int n = 10;
+  cout << ""The 10th Fibonacci number is: "" << fibonacci(n) << endl;
+  return 0;
+}"
+Codegen,"Implement a function in PHP to find and return the smallest element in an array.[9, 5, 8, 14, 3]","<?php
+
+function findSmallest($arr) {
+    $min = $arr[0];
+    for ($i = 1; $i < count($arr); $i++) {
+        if ($arr[$i] < $min) {
+            $min = $arr[$i];
+        }
+    }
+    return $min;
+}
+
+$array = array(9, 5, 8, 14, 3);
+$minValue = findSmallest($array);
+echo ""Smallest value in the array: $minValue\n"";
+?>"
+Codegen,"Create a Python function called 'vowel_count' that accepts a string as its argument and returns the total number of vowels (a, e, i, o, u) within the input string.This is an example text.","def vowel_count(text):
+    vowels = 'aeiou'
+    count = 0
+    for char in text.lower():
+        if char in vowels:
+            count += 1
+    return count"
+Codegen,"In JavaScript, how could one check if a given string is a valid IPv4 address?","function isValidIPv4Address(ip) {
+  const segments = ip.split('.');
+  if (segments.length !== 4) return false;
+
+  for (const segment of segments) {
+    if (isNaN(segment) || parseInt(segment) < 0 || parseInt(segment) > 255) {
+      return false;
+    }
+  }
+
+  return true;
+}"
+Codegen,"How would you write a JavaScript function that recursively calculates the nth Fibonacci number, given the value n as its input?6","function fibonacci(n) {
+    if (n <= 1) {
+        return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);}
+
+const n = 6;
+const result = fibonacci(n);
+console.log(`The ${n}th Fibonacci number is ${result}`);"
+Codegen,How would you write a JavaScript function that accepts a list of numbers and returns their sum?,"function sum(numbers) {
+    return numbers.reduce((acc, curr) => acc + curr, 0);
+}"
+Codegen,Construct a shell script that displays your local IP address and host machine name.,"#!/bin/bash
+ip_address=$(hostname -I | awk '{print $1}')
+host_name=$(hostname)
+echo ""IP address: $ip_address""
+echo ""Host name: $host_name"""
+Codegen,"What would be the output of the following Python code snippet?
+
+nums = [1, 2, 3, 4, 5]
+nums = nums[::-1]
+print(nums)","[5, 4, 3, 2, 1]"
+Codegen,"In Python, write a script to download a webpage's HTML content using the requests library.https://www.example.com","import requests
+
+url = 'https://www.example.com'
+response = requests.get(url)
+
+if response.status_code == 200:
+    html_content = response.text
+    print(html_content)
+else:
+    print('Failed to download webpage. Status code:', response.status_code)"
+Codegen,How would you implement a simple web server in Node.js that serves a static HTML file?index.html: a sample HTML file to serve,"const http = require('http');
+const fs = require('fs');
+
+const server = http.createServer((req, res) => {
+    fs.readFile('./index.html', 'utf-8', (error, content) => {
+        if (error) {
+            res.writeHead(500);
+            res.end('Internal Server Error');
+        } else {
+            res.writeHead(200, {'Content-Type': 'text/html'});
+            res.end(content);
+        }
+    });});
+
+server.listen(3000, () => {
+    console.log('Server running on port 3000');});"
+Codegen,Create a Python function that accepts a string of user-submitted text and sanitizes it by removing any HTML tags.<strong>This is</strong> some <em>sample</em> text with <i>HTML</i> tags.,"import re
+
+def sanitize_text(text):
+    clean_text = re.sub('<[^>]*>', '', text)
+    return clean_text"
+Codegen,"In Java, implement a simple method that takes an integer n and returns the nth Fibonacci number.","public int getFibonacci(int n) {
+  if (n <= 0) {
+    return 0;
+  }
+  int[] fib = new int[n + 1];
+  fib[0] = 0;
+  fib[1] = 1;
+  for (int i = 2; i <= n; i++) {
+    fib[i] = fib[i - 1] + fib[i - 2];
+  }
+  return fib[n];
+}"
+Codegen,"How can you refactor the following repetitive PowerShell script into a function that accepts arguments? -Get-ChildItem -Path 'C:\Folder1' -Recurse -Include *.txt
+Rename-Item -Path 'C:\Folder1\file1.txt' -NewName 'new_file1.txt'
+
+Get-ChildItem -Path 'C:\Folder2' -Recurse -Include *.txt
+Rename-Item -Path 'C:\Folder2\file2.txt' -NewName 'new_file2.txt'","function Rename-ItemInFolder ($folderPath, $oldFilename, $newFilename) {
+    Get-ChildItem -Path $folderPath -Recurse -Include *.txt
+    Rename-Item -Path ($folderPath + '\' + $oldFilename) -NewName $newFilename
+}
+
+Rename-ItemInFolder -folderPath 'C:\Folder1' -oldFilename 'file1.txt' -newFilename 'new_file1.txt'
+Rename-ItemInFolder -folderPath 'C:\Folder2' -oldFilename 'file2.txt' -newFilename 'new_file2.txt'"
+Codegen,"Create a Python script that reads a CSV file and outputs the sum of a specified column.Example CSV Content:
+Name,Age,Salary
+Alice,30,55000
+Bob,25,60000
+Charlie,22,45000
+
+Selected column: Salary","import csv
+
+
+def sum_column(file_path, column):
+    total = 0
+    with open(file_path, 'r') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            total += int(row[column])
+    return total"
+Codegen,"Given a list of numbers in JavaScript, write code that calculates the sum of all numbers in the list.[4, 7, 2, 9, 5]","const numbers = [4, 7, 2, 9, 5];
+const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+console.log(sum);"
+Codegen,What is a C++ code snippet to open a file and read its content into a string?example_filename: 'example.txt',"#include <fstream>
+#include <string>
+#include <sstream>
+
+std::ifstream file('example.txt');
+std::stringstream buffer;
+buffer << file.rdbuf();
+std::string fileContent = buffer.str();
+file.close();"
+Codegen,"Fix the given C++ code segment to calculate the factorial of a given positive integer.int factorial(int n) {
+    int fact = 1;
+    for (int i = 1; i <= n; ++i) {
+        fact = fact * i;
+    }
+    return fact;
+}
+
+int main() {
+    std::cout << ""Enter a positive integer: "";
+    int n;
+    std::cin >> n;
+    std::cout << ""Factorial of "" << n << "" = "" << factorial(n) << std::endl;
+}",The provided code segment is already correct for calculating the factorial of a given positive integer.
+Codegen,"Create a JavaScript function that reverses a given string and returns the reversed result.""wonderful""","function reverseString(str) {
+    return str.split('').reverse().join('');}
+
+const input = 'wonderful';
+const result = reverseString(input);
+console.log(`The reversed string is: ${result}`);"
+Codegen,Implement a C++ function that calculates the factorial of a positive integer using recursion.5,"#include <iostream>
+
+int factorial(int n) {
+    if (n <= 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);}
+
+int main() {
+    int n = 5;
+    std::cout << ""Factorial of "" << n << "" is "" << factorial(n) << std::endl;
+    return 0;}"
+Codegen,Create a shell script to count the number of files with a .txt extension in the current directory.,"#!/bin/bash
+
+file_count=$(ls *.txt 2>/dev/null | wc -l)
+echo ""Number of .txt files: $file_count"""
+Codegen,How would you implement a C++ function that finds and returns the largest element in an integer array?,"#include <iostream>
+#include <algorithm>
+
+int find_largest(int arr[], int length) {
+  return *std::max_element(arr, arr + length);
+}"
+Codegen,"What changes should be made to the given Python code to handle exceptions correctly? input_list = [1, 2, 'three', 4, 5] sum_values = sum(input_list)","input_list = [1, 2, 'three', 4, 5]
+
+# Wrap the summation in a function
+def sum_values(input_list):
+    total = 0
+    for value in input_list:
+        # Check if the value is a number (int or float)
+        if isinstance(value, (int, float)):
+            total += value
+        # Print a message for any non-numeric values encountered
+        else:
+            print(f'Non-numeric value encountered: {value}')
+
+    return total
+
+# Call the function
+sum_values = sum_values(input_list)"
+Codegen,"Create a Java method that accepts a string and returns the word count.public class WordCounter {
+    public static void main(String[] args) {
+        String testString = ""This is a test sentence with seven words."";
+        System.out.println(wordCount(testString));
+    }
+}","public static int wordCount(String input) {
+    String[] words = input.split(""\\s+"");
+    return words.length;
+}"
+Codegen,"How would you implement a JavaScript function to debounce input events with a given delay? Use the example below.function exampleFunction() { console.log('Debounced event!'); }, 300","function debounce(func, delay) {
+    let timerId;
+
+    return function(...args) {
+        if (timerId) {
+            clearTimeout(timerId);
+        }
+
+        timerId = setTimeout(() => {
+            func.apply(this, args);
+        }, delay);
+    };}
+
+const exampleFunction = () => console.log('Debounced event!');
+
+const debouncedEvent = debounce(exampleFunction, 300);
+
+window.addEventListener('resize', debouncedEvent);"
+Codegen,"Translate the following Python code that reads a CSV file and updates the specified column to lowercase into its C# equivalent:import csv
+
+with open('input.csv', 'r') as infile, open('output.csv', 'w') as outfile:
+    reader = csv.reader(infile)
+    writer = csv.writer(outfile)
+
+    for row in reader:
+        row[2] = row[2].lower()
+        writer.writerow(row)","using System;
+using System.IO;
+using CsvHelper;
+
+public class CsvLowercaser {
+    public static void Main(string[] args) {
+        using (var reader = new StreamReader(""input.csv""))
+        using (var writer = new StreamWriter(""output.csv""))
+        using (var csvReader = new CsvReader(reader, System.Globalization.CultureInfo.InvariantCulture))
+        using (var csvWriter = new CsvWriter(writer, System.Globalization.CultureInfo.InvariantCulture)) {
+            var records = csvReader.GetRecords<dynamic>();
+            foreach (var record in records) {
+                record.Field3 = record.Field3.ToLower();
+                csvWriter.WriteRecord(record);
+            }
+        }
+    }
+}"
+Codegen,Modify the following SQL query to return the first 10 rows of the 'students' table.SELECT * FROM students;,SELECT * FROM students LIMIT 10;
+Codegen,"Write a Java method that takes an ArrayList of integers as input and returns the sum of all its elements.import java.util.ArrayList;
+
+ArrayList<Integer> numbers = new ArrayList<Integer>();
+numbers.add(1);
+numbers.add(2);
+numbers.add(3);","import java.util.ArrayList;
+
+public static int sumArrayList(ArrayList<Integer> list) {
+    int sum = 0;
+    for (Integer number : list) {
+        sum += number;
+    }
+    return sum;
+}
+
+ArrayList<Integer> numbers = new ArrayList<Integer>();
+numbers.add(1);
+numbers.add(2);
+numbers.add(3);
+int result = sumArrayList(numbers);
+System.out.println(result);"
+Codegen,"What would be the expected output of the following Python code snippet? Explain your reasoning.def mystery_operation(x):
+    y = x * 2
+    x.append(y)
+    return y
+
+numbers = [1, 2, 3]
+result = mystery_operation(numbers)
+print(result)
+print(numbers)","The output would be:
+
+4 4
+[1, 2, 3, 4, 4]
+
+Explanation:
+The function 'mystery_operation' receives a list 'x' and first multiplies the second element in the list (2) by 2, resulting in 'y' being assigned the value 4. The function then appends 'y' to the list twice, modifying the original list 'numbers'. Finally, 'y' is returned, and both 'result' and the modified 'numbers' list are printed."
+Codegen,Implement a C function that accepts a string input and counts the number of vowels.The quick brown fox jumps over the lazy dog.,"#include <stdio.h>
+#include <ctype.h>
+
+int count_vowels(const char *str) {
+    int count = 0;
+    for (const char *p = str; *p; p++) {
+        char c = tolower(*p);
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+            count++;
+        }
+    }
+    return count;
+}
+
+int main() {
+    const char *input = ""The quick brown fox jumps over the lazy dog."";
+    int vowels = count_vowels(input);
+    printf(""Vowel count: %d\n"", vowels);
+    return 0;
+}"
+Codegen,"Develop a Java function that accepts a list of integers and calculates the median value of the elements.[1, 6, 7, 9, 2]","import java.util.ArrayList;
+import java.util.Collections;
+
+public class MedianCalculator {
+
+  public static double calculateMedian(ArrayList<Integer> numbers) {
+    Collections.sort(numbers);
+    int middle = numbers.size() / 2;
+
+    if (numbers.size() % 2 == 1) {
+      return numbers.get(middle);
+    } else {
+      return (numbers.get(middle - 1) + numbers.get(middle)) / 2.0;
+    }
+  }
+
+  public static void main(String[] args) {
+    ArrayList<Integer> sample = new ArrayList<>();
+    sample.add(1);
+    sample.add(6);
+    sample.add(7);
+    sample.add(9);
+    sample.add(2);
+
+    System.out.println(calculateMedian(sample));
+  }}"
+Codegen,How would you write a shell script that counts the number of lines in a text file?sample.txt,"#!/bin/bash
+filename=""sample.txt""
+line_count=$(wc -l < ""$filename"")
+echo ""Total lines in $filename: $line_count"""
+Codegen,Construct a shell script to collect running processes and their memory usage in a tabular format. Save the result into a text file named 'proc_mem_usage.txt'.,"#!/bin/bash
+
+ps axo pid,user,%mem,command --sort=-%mem | head -n 15 > proc_mem_usage.txt"
+Codegen,"Write a Java program that calculates the median of an array of integers.int[] nums = {3, 7, 1, 4, 12, 6};","import java.util.Arrays;
+
+public class MedianCalculator {
+    public static void main(String[] args) {
+        int[] nums = {3, 7, 1, 4, 12, 6};
+        System.out.println(findMedian(nums));
+    }
+
+    public static double findMedian(int[] nums) {
+        Arrays.sort(nums);
+        int n = nums.length;
+        return (n % 2 == 0) ? (nums[n / 2 - 1] + nums[n / 2]) / 2.0 : nums[n / 2];
+    }
+}"
+Codegen,What would be the correct implementation of a Python function that takes a list of numbers and returns the product of all elements?,"def product(numbers):
+    result = 1
+    for num in numbers:
+        result *= num
+    return result"
+Codegen,"Fix the following Python code that's supposed to return the factorial of a given number 'n' using recursion, but has a syntax error:def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n x factorial(n-1)","def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)"
+Codegen,"What would be the equivalent code for a Python list comprehension to filter odd numbers from a given list of integers?[1, 2, 3, 4, 5, 6]","numbers = [1, 2, 3, 4, 5, 6]
+odds = [num for num in numbers if num % 2 != 0]
+print(odds)"
+Codegen,"Write a shell script that lists all files in the directory and saves the output to a text file.Directory containing files: file1.txt, file2.txt, file3.txt","#!/bin/sh
+
+ls > file_list.txt"
+Codegen,"How can I refactor this JavaScript code to dynamically update the price based on the quantity?var price = 100;
+var quantity = 5;
+var total;
+total = price * quantity;
+console.log('The total cost is', total, 'dollars.');","function calculateTotal(price, quantity) {
+    return price * quantity;
+}
+
+var price = 100;
+var quantity = 5;
+var total = calculateTotal(price, quantity);
+console.log('The total cost is', total, 'dollars.');"
+Codegen,"Using JavaScript, write a function that takes a string and reverses its vowels.alphabet","function reverseVowels(str) {
+    const vowels = 'aeiouAEIOU';
+    let vowelsArray = [];
+    for (const char of str) {
+        if (vowels.includes(char)) {
+            vowelsArray.push(char);
+        }
+    }
+    let result = '';
+    for (const char of str) {
+        if (vowels.includes(char)) {
+            result += vowelsArray.pop();
+        } else {
+            result += char;
+        }
+    }
+    return result;
+}
+
+const inputStr = 'alphabet';
+const reversedVowelsStr = reverseVowels(inputStr);
+console.log(reversedVowelsStr);"
+Codegen,What's the code for a shell script that lists files in the current directory and their respective sizes?,"#!/bin/bash
+
+for file in *; do
+    echo ""${file}: $(stat -c %s ""${file}"") bytes""
+done"
+Codegen,"In C++, implement a function that reverses a given string in-place.Hello, World!","#include <iostream>
+#include <string>
+#include <algorithm>
+
+void reverse_string(std::string &str) {
+    std::reverse(str.begin(), str.end());
+}
+
+int main() {
+    std::string input = ""Hello, World!"";
+    reverse_string(input);
+    std::cout << input << std::endl;
+    return 0;
+}"
+Codegen,"Implement a C# class for a bank account, with deposit and withdraw methods, and include a main method for testing.Initial balance: 1000, Deposit: 500, Withdraw: 250","using System;
+
+    public class BankAccount
+    {
+        private decimal balance;
+
+        public BankAccount(decimal initialBalance)
+        {
+            balance = initialBalance;
+        }
+
+        public void Deposit(decimal amount)
+        {
+            balance += amount;
+        }
+
+        public void Withdraw(decimal amount)
+        {
+            if (balance >= amount)
+                balance -= amount;
+            else
+                Console.WriteLine(""Insufficient balance."");
+        }
+
+        public decimal GetBalance()
+        {
+            return balance;
+        }
+
+        public static void Main(string[] args)
+        {
+            BankAccount account = new BankAccount(1000);
+            account.Deposit(500);
+            account.Withdraw(250);
+            Console.WriteLine(""Final balance: "" + account.GetBalance());
+        }
+    }"
+Codegen,"Write a shell script that sorts a given list of numbers in descending order.10, 17, 5, 18, 6","#!/bin/bash
+numbers=""10 17 5 18 6""
+sorted_numbers=$(echo $numbers | tr ' ' '\n' | sort -nr | tr '\n' ' ')
+echo $sorted_numbers"
+Codegen,How would you implement a recursive C++ function to calculate the Fibonacci sequence for a given integer value n?n: 10,"#include <iostream>
+
+int fibonacci(int n) {
+    if (n <= 1) {
+        return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main() {
+    int n = 10;
+    int result = fibonacci(n);
+    std::cout << ""The Fibonacci value for n ="" << n << "" is: "" << result << std::endl;
+    return 0;
+}"
+Codegen,"Debug and fix the following Shell script that is supposed to create a file called 'greetings.txt', write 'Hello' as its content, and display the content of the file.touch greeting.txt/
+echo 'Helo' > greeting.txt/
+cat greeting.txt/","touch greetings.txt
+echo 'Hello' > greetings.txt
+cat greetings.txt"
+Codegen,"Fix the syntax errors in the given JavaScript code snippet.funcion add(x, y) {
+consol.log(""The sum is"", x + y);
+}","function add(x, y) {
+    console.log(""The sum is"", x + y);
+}
+
+// Usage: add(5, 3);"
+Codegen,"Create a Python function to remove duplicate elements from a list, maintaining the order of the elements.example_list = [1, 2, 3, 3, 4, 3, 5, 6, 5]","def remove_duplicates(input_list):
+    unique_list = []
+    for item in input_list:
+        if item not in unique_list:
+            unique_list.append(item)
+    return unique_list"
+Codegen,"Assuming I'm using the pandas library in Python, how can I drop all rows with NaN values in a DataFrame?import pandas as pd
+
+data = {'A': [1, 2, None], 'B': [4, None, 6], 'C': [7, 8, 9]}
+df = pd.DataFrame(data)","import pandas as pd
+
+data = {'A': [1, 2, None], 'B': [4, None, 6], 'C': [7, 8, 9]}
+df = pd.DataFrame(data)
+
+df = df.dropna()
+print(df)"
+Codegen,"How would you code a Bash script that iterates over all .txt files in a directory, and appends 'Processed' to the content of each file?File1.txt: 'Content1'
+File2.txt: 'Content2'","#!/bin/bash
+
+for file in *.txt; do
+    echo 'Processed' >> ""$file""
+done"
+Codegen,"Design a JavaScript function that takes an object with name and age properties and returns a greeting based on their age.{""name"": ""Alice"", ""age"": 28}","function ageGreeting(person) {
+    let ageCategory = '';
+
+    if (person.age < 18) {
+        ageCategory = 'young';
+    } else if (person.age >= 18 && person.age <= 30) {
+        ageCategory = 'adult';
+    } else {
+        ageCategory = 'senior';
+    }
+
+    return `Hello ${person.name}, you are a ${ageCategory} person.`;}
+
+const personObj = {""name"": ""Alice"", ""age"": 28};
+console.log(ageGreeting(personObj));"
+Codegen,"Translate the given Python code for calculating the sum of the first n natural numbers into an equivalent Java code.def sum_of_natural_numbers(n):
+    return n * (n + 1) // 2","public int sumOfNaturalNumbers(int n) {
+    return n * (n + 1) / 2;
+}"
+Codegen,"Explain the purpose of each line in the following C++ code and identify any issues, if present.#include <iostream>
+using namespace std;
+int main() {
+    int num1, num2;
+    cout << ""Enter two integers: "";
+    cin >> num1 >> num2;
+    int sum = num1 + num2;
+    cout << ""The sum is: "" << sum << endl;
+    return 0;
+}","1. #include <iostream>: Include the 'iostream' header file required for input/output operations.
+2. using namespace std;: Bring identifiers from the 'std' namespace into the current scope.
+3. int main(): Define the main function that serves as an entry point for the program.
+4. int num1, num2;: Declare two integer variables, 'num1' and 'num2'.
+5. cout << ""Enter two integers: "": Print a prompt asking the user to enter two integers.
+6. cin >> num1 >> num2;: Read two integer values from the user into 'num1' and 'num2'.
+7. int sum = num1 + num2;: Calculate the sum of 'num1' and 'num2' and store it in the integer variable 'sum'.
+8. cout << ""The sum is: "" << sum << endl;: Print the result of the sum followed by a newline.
+9. return 0;: Exit the program, returning 0 to indicate successful execution."
+Codegen,How can you implement a basic web server using Node.js and the Express.js framework?port: 3000,"const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+    res.send('Hello, World!');});
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);});"
+Codegen,Explain a Python code snippet that calculates the factorial of a given number n using tail recursion.,"def factorial_helper(n, accumulator):
+  if n == 0:
+    return accumulator
+  return factorial_helper(n - 1, n * accumulator)
+
+def factorial(n):
+  return factorial_helper(n, 1)
+
+The code defines two functions: 'factorial_helper' and 'factorial'. The 'factorial_helper' function is used to achieve tail recursion. It takes two arguments: 'n' as the given number, and 'accumulator' to accumulate the results during recursion. The base case occurs when n is 0, and accumulator is returned. Otherwise, 'factorial_helper' calls itself with n - 1 and the updated accumulator (n * accumulator). The factorial function is a wrapper function that calls 'factorial_helper' with accumulator initialized to 1."
+Codegen,"Correct the syntax error in the following Python code snippet: 'def calculate_area(width, height): return witdh*height'","def calculate_area(width, height):
+    return width * height"
+Codegen,"Create a JavaScript promise that resolves after a given number of milliseconds with a specified message.2000, 'Operation successful'","function delay(ms, message) {
+    return new Promise(resolve => {
+        setTimeout(() => resolve(message), ms);
+    });}
+
+delay(2000, 'Operation successful').then(console.log);"
+Codegen,"Write a PHP function that accepts an associative array of employee data and calculates the average salary.employees: [{""name"":""John"",""salary"":45000},{""name"":""Jane"",""salary"":55000},{""name"":""Mark"",""salary"":60000}]","<?php
+
+function calculate_average_salary($employees) {
+    $total_salary = 0;
+    $num_employees = count($employees);
+    
+    foreach ($employees as $employee) {
+        $total_salary += $employee['salary'];
+    }
+    
+    $average_salary = $total_salary / $num_employees;
+    return $average_salary;}
+
+$employees = [
+    ['name' => 'John', 'salary' => 45000],
+    ['name' => 'Jane', 'salary' => 55000],
+    ['name' => 'Mark', 'salary' => 60000]
+];
+
+echo 'Average salary: ' . calculate_average_salary($employees);"
+Codegen,"Given a string containing a date in the format 'YYYY-MM-DD', write a Java function to extract the year, month, and day as integers.","public static int[] extractYearMonthDay(String date) {
+ String[] parts = date.split(""-"");
+ int year = Integer.parseInt(parts[0]);
+ int month = Integer.parseInt(parts[1]);
+ int day = Integer.parseInt(parts[2]);
+ return new int[]{year, month, day};
+}"
+Codegen,"Write a shell script that, given a path to a directory, counts the number of files and subdirectories inside it./home/user/documents","#!/bin/sh
+
+dir_path='/home/user/documents'
+
+files_count=$(find ""$dir_path"" -type f | wc -l)
+dirs_count=$(find ""$dir_path"" -type d | wc -l)
+
+echo ""Files: $files_count""
+echo ""Directories: $dirs_count"""
+Codegen,"Write a Python function that reads a CSV file and prints the unique values in the specified column.sample.csv, 2","import csv
+
+def print_unique_values(file_path, column):
+    unique_values = set()
+    with open(file_path, 'r') as file:
+        reader = csv.reader(file)
+        next(reader)  # Skip header
+
+        for row in reader:
+            unique_values.add(row[column])
+
+    for value in unique_values:
+        print(value)
+
+print_unique_values('sample.csv', 2)"
+Codegen,Explain how to use exception handling in Python to deal with a ZeroDivisionError when dividing two numbers.,"To handle a ZeroDivisionError in Python, you can use a try-except block. Place the code that may cause the error inside the try block and handle the exception in the except block. Here's an example:
+
+def safe_divide(a, b):
+ try:
+ result = a / b
+ except ZeroDivisionError:
+ print(""Cannot divide by zero"")
+ result = None
+ return result"
+Codegen,Write a C# function that checks if an input string is a palindrome.,"public static bool IsPalindrome(string input)
+{
+    int start = 0;
+    int end = input.Length - 1;
+    while (start < end)
+    {
+        if (input[start] != input[end])
+        {
+            return false;
+        }
+        start++;
+        end--;
+    }
+    return true;
+}"
+Codegen,Write a C++ function that finds the factorial of a given positive integer.6,"#include <iostream>
+using namespace std;
+
+unsigned long long factorial(int n) {
+    if (n == 0)
+        return 1;
+    return n * factorial(n - 1);}
+
+int main() {
+    int num = 6;
+    unsigned long long result = factorial(num);
+    cout << ""Factorial of "" << num << "" is: "" << result << endl;
+    return 0;}"
+Codegen,"How would you refactor the following C++ code which calculates the square of every element in an array using a for loop?#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> arr = {1, 2, 3, 4, 5};
+    for (int i = 0; i < arr.size(); i++) {
+        arr[i] = arr[i] * arr[i];
+    }
+    return 0;
+}","#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main() {
+    std::vector<int> arr = {1, 2, 3, 4, 5};
+    std::transform(arr.begin(), arr.end(), arr.begin(), [](int num) { return num * num; });
+    return 0;
+}"
+Codegen,How would you create a Python method to calculate and return the factorial of a non-negative integer?5,"def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+result = factorial(5)
+print(result)"
+Codegen,Construct a PHP function that retrieves the user's IP address.,"<?php
+
+function getUserIP() {
+    $ip = '';
+    
+    if (isset($_SERVER['HTTP_CLIENT_IP'])) {
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+    } elseif (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else {
+        $ip = $_SERVER['REMOTE_ADDR'];
+    }
+
+    return $ip;}
+
+$user_ip = getUserIP();
+echo 'User IP address: ' . $user_ip;
+
+?>"
+Codegen,"How would you implement a simple bubble sort algorithm in Java?int[] nums = {37, 45, 29, 8, 12, 88, 58};","public static void bubbleSort(int[] nums) {
+    int n = nums.length;
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - 1 - i; j++) {
+            if (nums[j] > nums[j + 1]) {
+                int temp = nums[j];
+                nums[j] = nums[j + 1];
+                nums[j + 1] = temp;
+            }
+        }
+    }
+}
+
+int[] nums = {37, 45, 29, 8, 12, 88, 58};
+bubbleSort(nums);"
+Codegen,"Write a C++ program to find the largest element in an array of integers.{4, 9, 7, 1, 3}","#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main() {
+  std::vector<int> nums = {4, 9, 7, 1, 3};
+  int max_element = *std::max_element(nums.begin(), nums.end());
+  std::cout << ""Largest element: "" << max_element << std::endl;
+
+  return 0;}"
+Codegen,"Write a Python function that takes a JSON string and saves it to a file.{""greetings"": ""Hello, world!""}","import json
+
+def save_json_to_file(json_string, file_name):
+    with open(file_name, 'w') as file:
+        json.dump(json_string, file)
+
+json_string = json.loads('{""greetings"": ""Hello, world!""}')
+save_json_to_file(json_string, 'output.json')"
+Codegen,"Develop a C++ program to sort a list of numbers using the Bubble Sort algorithm.5, 1, 9, 3, 2","#include <iostream>
+#include <vector>
+#include <algorithm>
+
+void bubbleSort(std::vector<int>& nums) {
+    for (size_t i = 0; i < nums.size(); ++i) {
+        for (size_t j = 0; j + 1 < nums.size() - i; ++j) {
+            if (nums[j] > nums[j + 1]) {
+                std::swap(nums[j], nums[j + 1]);
+            }
+        }
+    }}
+
+int main() {
+    std::vector<int> nums{5, 1, 9, 3, 2};
+    
+    bubbleSort(nums);
+
+    for (const auto& num : nums) {
+        std::cout << num << ' ';
+    }
+
+    return 0;}"
+Codegen,Construct a PHP function that evaluates if a given year is a leap year.Example: 2024,"<?php
+
+function is_leap_year($year) {
+    return (($year % 4 == 0) && ($year % 100 != 0)) || ($year % 400 == 0);}
+
+$example = 2024;
+echo ""Is leap year: "" . (is_leap_year($example) ? ""true"" : ""false"");
+"
+Codegen,"In Java, create a program that prompts the user for a string and then reverses the order of the words in that string.Portraying the Starry Night","import java.util.Scanner;
+
+class ReverseWords {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print('Enter a string: ');
+        String input = scanner.nextLine();
+
+        String[] words = input.split(' ');
+        String reversed = '';
+
+        for (int i = words.length - 1; i >= 0; i--) {
+            reversed += words[i] + (i == 0 ? '' : ' ');
+        }
+
+        System.out.println('Reversed: ' + reversed);
+    }
+}"
+Codegen,Implement a JavaScript function that finds the longest word in a given sentence.The quick brown fox jumped over the lazy dog.,"function findLongestWord(sentence) {
+    const words = sentence.split(' ');
+    let longestWord = '';
+
+    words.forEach(word => {
+        if (word.length > longestWord.length) {
+            longestWord = word;
+        }
+    });
+
+    return longestWord;
+}
+
+const result = findLongestWord('The quick brown fox jumped over the lazy dog.');
+console.log(result);"
+Codegen,"How would you rewrite the following Java code to use a lambda expression instead of an anonymous class?Collections.sort(employeeList, new Comparator<Employee>() {
+    @Override
+    public int compare(Employee emp1, Employee emp2) {
+        return emp1.getName().compareTo(emp2.getName());
+    }
+});","Collections.sort(employeeList, (Employee emp1, Employee emp2) -> emp1.getName().compareTo(emp2.getName()));"
+Codegen,"Implement a shell script that retrieves the total number of lines, words, and characters in a given text file.example.txt","#!/bin/bash
+
+filename=$1
+lines=$(wc -l < $filename)
+words=$(wc -w < $filename)
+characters=$(wc -m < $filename)
+
+echo ""Total Lines: $lines""
+echo ""Total Words: $words""
+echo ""Total Characters: $characters"""
+Codegen,"Given the Python code below, can you refactor it using list comprehension to achieve the same result? 
+
+result = []
+for i in range(10):
+    if i % 2 == 0:
+        result.append(i ** 2)
+print(result)","result = [i ** 2 for i in range(10) if i % 2 == 0]
+print(result)"
+Codegen,Design a C++ program that reads a user's input for an integer value and returns the factorial of that number using a recursive function.5,"#include <iostream>
+using namespace std;
+
+int factorial(int n);
+
+int main() {
+    int num;
+    cout << ""Enter a positive integer: "";
+    cin >> num;
+    cout << ""Factorial of "" << num << "" is: "" << factorial(num) << endl;
+    return 0;}
+
+int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    }
+    return n * factorial(n - 1);}"
+Codegen,Write a Java function that reads an XML file and prints its tag names.,"import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
+
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+
+import java.io.File;
+
+class XMLTagPrinter extends DefaultHandler {
+
+    public static void main(String[] args) {
+        try {
+            File inputFile = new File('input.xml');
+            SAXParserFactory factory = SAXParserFactory.newInstance();
+            SAXParser saxParser = factory.newSAXParser();
+            XMLTagPrinter tagPrinter = new XMLTagPrinter();
+            saxParser.parse(inputFile, tagPrinter);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void startElement(String uri, String localName, String qName, Attributes attributes)
+            throws SAXException {
+        System.out.println('Start Element :' + qName);
+    }
+
+    public void endElement(String uri, String localName, String qName) throws SAXException {
+        System.out.println('End Element :' + qName);
+    }
+}"
+Codegen,"Implement a Python function that counts the occurrences of a word in a given text string.text = 'apple banana apple orange apple grape banana'
+search_word = 'apple'","def count_word_occurrences(text, search_word):
+    words = text.split()
+    count = words.count(search_word)
+    return count
+
+text = 'apple banana apple orange apple grape banana'
+search_word = 'apple'
+result = count_word_occurrences(text, search_word)
+print(result)"
+Codegen,"Implement a C++ function that reverses a given string in place.""programming""","#include <iostream>
+#include <algorithm>
+#include <string>
+
+void reverseString(std::string& str) {
+    std::reverse(str.begin(), str.end());}
+
+int main() {
+    std::string s = ""programming"";
+    reverseString(s);
+    std::cout << s << std::endl;
+    return 0;}"
+Codegen,Can you provide a Python script that reads a CSV file and prints the number of rows and columns?csv_file.csv,"import csv
+
+csv_file_path = 'csv_file.csv'
+
+with open(csv_file_path, 'r') as csvfile:
+    reader = csv.reader(csvfile)
+    num_rows = 0
+    num_columns = 0
+
+    for row in reader:
+        num_rows += 1
+        row_length = len(row)
+        if row_length > num_columns:
+            num_columns = row_length
+
+print('Number of rows:', num_rows)
+print('Number of columns:', num_columns)"
+Codegen,Translate the following Python code into C++: def is_even(n): return n % 2 == 0,"#include <iostream>
+
+bool is_even(int n) {
+    return n % 2 == 0;
+}
+
+int main() {
+    int number = 6;
+    bool result = is_even(number);
+    std::cout << ""Is "" << number << "" even? "" << (result ? ""Yes"" : ""No"") << std::endl;
+    return 0;
+}"
+Codegen,"Using Ruby, write a method that takes an array of positive integers and returns the integer with the highest frequency.","def highest_frequency(numbers)
+  frequencies = numbers.each_with_object(Hash.new(0)) { |number, count| count[number] += 1 }
+  frequencies.key(frequencies.values.max)
+end"
+Codegen,Write a C++ program to find the factorial of a given number using recursion.6,"#include <iostream>
+using namespace std;
+
+int factorial(int n) {
+    if(n == 0 || n == 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }}
+
+int main() {
+    int number = 6;
+    cout << ""Factorial of "" << number << "" is: "" << factorial(number) << endl;
+    return 0;}"
+Codegen,"Write a shell script that checks if a directory exists, and if not, creates the directory with the given pathname.~/my_new_directory","#!/bin/sh
+
+dir_path=""~/my_new_directory""
+
+if [ ! -d ""$dir_path"" ]; then
+  mkdir -p ""$dir_path""
+  echo ""Directory created: $dir_path""
+else
+  echo ""Directory already exists: $dir_path""
+fi"
+Codegen,Provide a brief explanation and example code for using a 'map' function in Python to apply a function to each element in a list.,"The 'map' function in Python is used to apply a specified function to each item in an iterable, like a list. The syntax is 'map(function, iterable)'. The function doesn't modify the original iterable but returns a new iterable with the results.
+
+Example:
+def square(x):
+    return x * x
+
+numbers = [1,2,3,4]
+squared_numbers = map(square, numbers)
+
+for num in squared_numbers:
+    print(num)"
+Codegen,"Implement a Java method that reverses a given string without using a built-in reverse method.public String reverseString(String originalString) {
+  // Your code here
+}","public String reverseString(String originalString) {
+  char[] charArray = originalString.toCharArray();
+  int left = 0;
+  int right = charArray.length - 1;
+
+  while (left < right) {
+    char temp = charArray[left];
+    charArray[left] = charArray[right];
+    charArray[right] = temp;
+    left++;
+    right--;
+  }
+
+  return new String(charArray);
+}"
+Codegen,"Rewrite the following Python code snippet to make it more Pythonic.numbers = [5, 2, 9, 1, 5, 6]
+
+minimum = numbers[0]
+
+for num in numbers:
+    if num < minimum:
+        minimum = num
+
+print(minimum)","numbers = [5, 2, 9, 1, 5, 6]
+
+minimum = min(numbers)
+print(minimum)"
+Codegen,How would you write a shell script to iterate through a list of words and print each word in reverse?apple banana orange,"#!/bin/bash
+
+list=""apple banana orange""
+
+for word in $list; do
+    reverse=$(echo ""$word"" | rev)
+    echo ""$reverse""
+done"
+Codegen,"Design a Python function that takes a string as input and returns True if it's a palindrome, otherwise returns False.","def is_palindrome(s):
+    s = s.lower()
+    s = ''.join(filter(lambda x: x.isalnum(), s))
+    return s == s[::-1]"
+Codegen,"Write a function in JavaScript to calculate and return the Euclidean distance between two points in a 2D space.{x1: 3, y1: 4, x2: 6, y2: 8}","function euclideanDistance(x1, y1, x2, y2) {
+    const dx = x2 - x1;
+    const dy = y2 - y1;
+    return Math.sqrt(dx*dx + dy*dy);}
+
+const result = euclideanDistance(3, 4, 6, 8);
+console.log(result);"
+Codegen,"Implement a PHP function that removes duplicates from an array and returns the unique elements.[1, 2, 3, 2, 1]","<?php
+
+function remove_duplicates($arr) {
+    return array_unique($arr);}
+
+$input_array = array(1, 2, 3, 2, 1);
+$result = remove_duplicates($input_array);
+print_r($result);
+
+?>"
+Codegen,"Given a JavaScript code snippet, refactor it to use arrow functions instead of traditional function expressions, making the code more concise.function sum(a, b) {
+  return a + b;
+}
+
+var multiply = function(a, b) {
+  return a * b;
+};
+
+setTimeout(function() {
+  console.log('Executed later after 1 second')
+}, 1000);","const sum = (a, b) => a + b;
+
+const multiply = (a, b) => a * b;
+
+setTimeout(() => {
+  console.log('Executed later after 1 second')
+}, 1000);"
+Codegen,"Given a C++ code snippet, identify the syntax errors and correct them.#include <iostream>
+
+int main() {
+    std::cout >> ""Hello, World!"" << std::endl
+    return 0;
+}","#include <iostream>
+
+int main() {
+    std::cout << ""Hello, World!"" << std::endl;
+    return 0;
+}"
+Codegen,"Fix the following JavaScript code that should return the sum of an array of integers.let numbers = [1, 2, 3, 4, 5];
+
+function arraySum(array) {
+    let sum = 0;
+    for (let i = 0; i <= array.length; i++) {
+        sum += array[i];
+    }
+    return sum;
+}
+
+console.log(arraySum(numbers));","let numbers = [1, 2, 3, 4, 5];
+
+function arraySum(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+    }
+    return sum;
+}
+
+console.log(arraySum(numbers));"
+Codegen,"Write a PHP script that takes an associative array, replaces a specified key with a new key, and keeps the rest of the array intact.['a' => 1, 'b' => 2, 'c' => 3], 'b', 'd'","<?php
+
+function replace_key($arr, $old_key, $new_key) {
+    if (!array_key_exists($old_key, $arr)) {
+        return $arr;
+    }
+
+    $new_arr = [];
+    foreach ($arr as $key => $value) {
+        $new_key_to_use = $key == $old_key ? $new_key : $key;
+        $new_arr[$new_key_to_use] = $value;
+    }
+
+    return $new_arr;}
+
+$array = ['a' => 1, 'b' => 2, 'c' => 3];
+$result = replace_key($array, 'b', 'd');
+print_r($result);
+
+?>"
+Codegen,Create a Shell script that lists all files in a directory sorted by their size.,"#!/bin/bash
+
+ls -lSh"
+Codegen,"Provide a C++ function that takes a vector of integers as input and reorders it such that even numbers appear before odd numbers. The relative order of even and odd numbers should remain unchanged.std::vector<int> input = {1, 2, 3, 4, 5, 6, 7, 8, 9};","#include <vector>
+#include <algorithm>
+
+void reorderEvenOdd(std::vector<int>& input) {
+  std::stable_partition(input.begin(), input.end(), [](int x) { return x % 2 == 0; });
+}
+"
+Codegen,"Create a Python script that receives a list of words, counts the occurrences of each word and displays the top 3 most frequent words.['apple', 'banana', 'apple', 'orange', 'banana', 'apple']","from collections import Counter
+
+words = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']
+counts = Counter(words)
+top_words = counts.most_common(3)
+print(top_words)"
+Codegen,"How would you write a C++ program to swap the values of two integer variables without using a temporary variable?int a = 5;
+int b = 10;","#include <iostream>
+
+int main() {
+    int a = 5;
+    int b = 10;
+
+    a = a + b;
+    b = a - b;
+    a = a - b;
+
+    std::cout << ""a: "" << a << "" b: "" << b << std::endl;
+
+    return 0;
+}"
+Codegen,"Design a SQL query to retrieve the names and email addresses of customers who have made more than $500 in purchases.Orders table: (order_id, customer_id, order_date, total_amount)
+Customers table: (customer_id, first_name, last_name, email, signup_date)","SELECT c.first_name, c.last_name, c.email 
+FROM Customers c
+JOIN Orders o ON c.customer_id = o.customer_id
+GROUP BY o.customer_id
+HAVING SUM(o.total_amount) > 500;"
+Codegen,Can you write a Python program that accepts a sentence as input and prints the characters that have even ASCII values in reverse order?The quick brown fox jumps over the lazy dog.,"def even_ascii_reverse(sentence):
+    even_ascii_chars = [char for char in sentence if ord(char) % 2 == 0]
+    return ''.join(even_ascii_chars[::-1])
+
+sentence = 'The quick brown fox jumps over the lazy dog.'
+result = even_ascii_reverse(sentence)
+print(result)"
+Codegen,"Develop a Java function that calculates the sum of all even numbers in an array.[1, 3, 5, 6, 10]","public int sumEvenNumbers(int[] numbers) {
+    int sum = 0;
+    for (int number : numbers) {
+        if (number % 2 == 0) {
+            sum += number;
+        }
+    }
+    return sum;
+}
+
+int[] inputArray = {1, 3, 5, 6, 10};
+int result = sumEvenNumbers(inputArray);
+System.out.println(result);"
+Codegen,"Implement a Python script that utilizes the pandas library to read a CSV file and print the statistics for each column.filename.csv
+id,age,salary
+1,35,60000
+2,42,80000
+3,28,55000","import pandas as pd
+
+filename = 'filename.csv'
+data = pd.read_csv(filename)
+
+statistics = data.describe()
+print(statistics)"
+Codegen,Write a shell script that takes a filename as an input and outputs the file's line count.,"#!/bin/bash
+
+if [ ""$#"" -ne 1 ]; then
+  echo ""Usage: $0 <filename>""
+  exit 1
+fi
+
+filename=$1
+line_count=$(wc -l <""$filename"")
+echo ""Line count: $line_count"""
+Codegen,"How would you implement a Python script that reads a CSV file and outputs the number of lines and words in the file?data.csv (example content: ""Name,Age,Location
+Alice,25,New York
+Bob,30,San Francisco"")","import csv
+
+def count_lines_and_words(filename):
+    lines = 0
+    words = 0
+    with open(filename, 'r') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            lines += 1
+            words += len(row)
+
+    return lines, words
+
+lines, words = count_lines_and_words('data.csv')
+print(f'Total lines: {lines}')
+print(f'Total words: {words}')"
+Codegen,How would you implement a doubly linked list using C++?,"#include<iostream>
+using namespace std;
+
+class Node {
+public:
+    int data;
+    Node* prev;
+    Node* next;
+};
+
+void append(Node** head_ref, int new_data) {
+    Node* new_node = new Node();
+    Node* last = *head_ref;
+
+    new_node->data = new_data;
+    new_node->next = NULL;
+
+    if (*head_ref == NULL) {
+        new_node->prev = NULL;
+        *head_ref = new_node;
+        return;
+    }
+
+    while (last->next != NULL)
+        last = last->next;
+
+    last->next = new_node;
+    new_node->prev = last;
+}
+
+void print_list(Node* node) {
+    while (node != NULL) {
+        cout << node->data << ' ';
+        node = node->next;
+    }
+}
+
+int main() {
+    Node* head = NULL;
+    append(&head, 1);
+    append(&head, 2);
+    append(&head, 3);
+    append(&head, 4);
+
+    print_list(head);
+    return 0;
+}"
+Codegen,How would you implement a Python function that calculates the factorial of a positive integer n?5,"def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+result = factorial(5)
+print(result)"
+Codegen,What C# code can be used to determine if a string contains only unique characters without using additional data structures?,"public bool HasUniqueChars(string s) {
+    for (int i = 0; i < s.Length - 1; i++) {
+        for (int j = i + 1; j < s.Length; j++) {
+            if (s[i] == s[j]) {
+                return false;
+            }
+        }
+    }
+    return true;
+}"
+Codegen,Write a Bash script that calculates the sum of all integers from 1 to a given number provided as a command-line argument.,"#!/bin/bash
+
+number=$1
+sum=0
+
+for ((i=1; i<=number; i++))
+do
+    sum=$((sum + i))
+done
+
+echo $sum"
+Codegen,"Write a JavaScript function that, given an object with keys representing fruit names and values representing their prices, finds the cheapest fruit.{""apple"": 1.2, ""banana"": 0.5, ""orange"": 0.9}","function getCheapestFruit(prices) {
+  let minPrice = Infinity;
+  let cheapestFruit = '';
+  for (const [fruit, price] of Object.entries(prices)) {
+    if (price < minPrice) {
+      minPrice = price;
+      cheapestFruit = fruit;
+    }
+  }
+  return cheapestFruit;
+}
+
+const fruitPrices = {""apple"": 1.2, ""banana"": 0.5, ""orange"": 0.9};
+const result = getCheapestFruit(fruitPrices);
+console.log(result);"
+Codegen,Design a simple RESTful API in Python using the Flask framework that takes a string as input and returns the string in uppercase.,"from flask import Flask, request
+
+app = Flask(__name__)
+
+@app.route('/uppercase', methods=['POST'])
+def uppercase():
+    input_string = request.json.get('input_string', '')
+    return {'uppercase': input_string.upper()}
+
+if __name__ == '__main__':
+    app.run(debug=True)"
+Codegen,"Fix the Java code that adds two numbers: 'int addTwoNumbers(int a, int' without a closing parenthesis.int addTwoNumbers(int a, int","int addTwoNumbers(int a, int b) {
+    return a + b;
+}
+
+// Fixed the missing parameter and closing parenthesis."
+Codegen,"Write a C++ program that reads a file called 'input.txt' and counts the number of lines in it.input.txt content:
+Hello, world!
+This is a test.
+Third line.","#include <iostream>
+#include <fstream>
+#include <string>
+
+int main() {
+    std::ifstream inFile(""input.txt"");
+    std::string line;
+    int lineCount = 0;
+
+    while (std::getline(inFile, line)) {
+        lineCount++;
+    }
+
+    std::cout << ""Number of lines: "" << lineCount << std::endl;
+    inFile.close();
+
+    return 0;
+}"
+Codegen,"Implement a simple binary search algorithm in Python, which takes a sorted list of integers and a target integer as inputs, and returns the index of the target integer if found, otherwise returns -1.","def binary_search(sorted_list, target):
+    left, right = 0, len(sorted_list) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if sorted_list[mid] == target:
+            return mid
+        elif sorted_list[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1"
+Codegen,"Rewrite the following JavaScript code to eschew if-else structures and handle the switch statement request by using an object lookup.function commandHandler(command) {
+  switch (command) {
+    case 'start':
+      console.log('Starting...');
+      break;
+    case 'stop':
+      console.log('Stopping...');
+      break;
+    default:
+      console.log('Invalid command');
+  }
+}","function commandHandler(command) {
+  const actions = {
+    'start': () => console.log('Starting...'),
+    'stop': () => console.log('Stopping...'),
+  };
+  const action = actions[command] || (() => console.log('Invalid command'));
+  action();
+}"
+Codegen,"Convert the following Python code to its equivalent in Ruby.def greeting(name):
+    return 'Hello, ' + name
+
+print(greeting('John'))","def greeting(name)
+  return 'Hello, ' + name
+end
+
+puts greeting('John')"
+Codegen,Write a shell script to rename all files with a '.txt' extension in the current directory to have a '.bak' extension instead.,"#!/bin/bash
+
+for file in *.txt; do
+    mv ""$file"" ""${file%.txt}.bak""
+done"
+Codegen,"Design a Python class that represents a circle, taking the radius as an input, and includes a method to calculate the area.8","import math
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def calculate_area(self):
+        return math.pi * (self.radius ** 2)
+
+my_circle = Circle(8)
+print('Circle area:', my_circle.calculate_area())"
+Codegen,Create a C++ function that calculates the area of a circle given its radius.4,"#include <iostream>
+#include <cmath>
+#define PI 3.14159
+
+double calculate_area(double radius) {
+    return PI * pow(radius, 2);
+}
+
+int main() {
+    double radius = 4;
+    double area = calculate_area(radius);
+    std::cout << ""Area of the circle with radius "" << radius << "" is: "" << area << std::endl;
+    return 0;
+}"
+Codegen,"Create a C# program that takes an input string and reverses its characters.""hello""","using System;
+
+class ReverseString {
+    static void Main() {
+        string input = ""hello"";
+        char[] reversedCharArray = GetReversedCharArray(input);
+        string reversedString = new string(reversedCharArray);
+        Console.WriteLine(reversedString);
+    }
+
+    static char[] GetReversedCharArray(string original) {
+        char[] arr = original.ToCharArray();
+        Array.Reverse(arr);
+        return arr;
+    }}"
+Codegen,"In JavaScript, give an example of using the Fetch API to make a GET request to a specific URL.https://jsonplaceholder.typicode.com/posts/1","fetch('https://jsonplaceholder.typicode.com/posts/1')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));"
+Codegen,Implement a Python function to calculate the factorial of a given non-negative integer using recursion.6,"def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+result = factorial(6)
+print(result)"
+Codegen,"Write a C++ function that accepts a vector of strings and prints each string on a new line.{""Hello, World!"", ""This is a test. "", ""Coding is fun.""}","#include <iostream>
+#include <vector>
+#include <string>
+
+void print_strings(const std::vector<std::string> &strings) {
+    for (const std::string &str : strings) {
+        std::cout << str << std::endl;
+    }}
+
+int main() {
+    std::vector<std::string> strings = {""Hello, World!"", ""This is a test. "", ""Coding is fun.""};
+    print_strings(strings);
+    return 0;}"
+Codegen,"In Java, write a method that takes a string input and returns the count of vowels in the string.inputString = ""Hello, I am an AI language model.""","public int countVowels(String inputString) {
+    int vowelCount = 0;
+    for (char c : inputString.toLowerCase().toCharArray()) {
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+            vowelCount++;
+        }
+    }
+    return vowelCount;
+}
+
+int result = countVowels(""Hello, I am an AI language model."");
+System.out.println(result);"
+Codegen,"Write a Java function that accepts an array of integers and returns the maximum value in the array.int[] numbers = {3, 5, 2, 7, 1};","public static int findMax(int[] numbers) {
+    int max = numbers[0];
+
+    for (int i = 1; i < numbers.length; i++) {
+        if (numbers[i] > max) {
+            max = numbers[i];
+        }
+    }
+
+    return max;
+}
+
+int[] numbers = {3, 5, 2, 7, 1};
+int maxValue = findMax(numbers);
+System.out.println(maxValue);"
+Codegen,"Implement a function in JavaScript that sorts a list of objects based on a specified property and its order (ascending or descending).[{name:'Alice',age:35},{name:'Bob',age:28},{name:'Eve',age:38}]
+property: age
+order: ascending","function sortByProperty(arr, property, order) {
+    return arr.sort((a, b) => {
+        if (order === 'ascending') {
+            return a[property] - b[property];
+        } else {
+            return b[property] - a[property];
+        }
+    });}
+
+const people = [{name:'Alice',age:35},{name:'Bob',age:28},{name:'Eve',age:38}];
+const sorted = sortByProperty(people, 'age', 'ascending');
+console.log(sorted);"
+Codegen,"Translate the following Python code to C++:def function_name(param1, param2):
+    result = param1 * param2
+    return result","#include <iostream>
+
+int function_name(int param1, int param2) {
+    int result = param1 * param2;
+    return result;
+}
+
+int main() {
+  std::cout << ""Result: "" << function_name(5, 6) << std::endl;
+  return 0;
+}"
+Codegen,Write a shell script to count the number of files in a specified directory./path/to/directory,"#!/bin/bash
+
+dir_path=""/path/to/directory""
+
+file_count=$(find ""$dir_path"" -type f | wc -l)
+
+echo ""Number of files in directory: $file_count"""
+Codegen,"Implement a C++ program to read a file, count the number of words present and display the count.The quick brown fox jumps over the lazy dog.","#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    ifstream inFile;
+    string fileName = ""input.txt"";
+    inFile.open(fileName);
+
+    if (!inFile) {
+        cerr << ""Unable to open file"" << endl;
+        exit(1);
+    }
+
+    string word;
+    int wordCount = 0;
+
+    while (inFile >> word) {
+        wordCount++;
+    }
+
+    inFile.close();
+    cout << ""Number of words: "" << wordCount << endl;
+
+    return 0;
+}"
+Codegen,"Rewrite the following JavaScript code snippet using arrow functions instead of regular functions.function double(x) {
+    return x * 2;
+}
+
+function triple(x) {
+    return x * 3;
+}
+
+function square(x) {
+    return x * x;
+}","const double = (x) => x * 2;
+const triple = (x) => x * 3;
+const square = (x) => x * x;"
+Codegen,Create a JavaScript function that calculates the factorial of a given number.5,"function factorial(n) {
+    if (n === 0) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+const num = 5;
+const result = factorial(num);
+console.log(result);"
+Codegen,"Implement a shell script that accepts a list of arguments, sorts them in ascending order, and prints each element on a separate line.8 5 9 -2 11 1","#!/bin/bash
+
+# Store the arguments in an array
+args=($@)
+
+# Sort the array
+for ((i=0; i<${#args[@]}; i++)); do
+    for ((j=i+1; j<${#args[@]}; j++)); do
+        if [ ${args[$i]} -gt ${args[$j]} ]; then
+            temp=${args[$i]}
+            args[$i]=${args[$j]}
+            args[$j]=$temp
+        fi
+    done
+done
+
+# Print the sorted array
+for num in ""${args[@]}""
+do
+    echo $num
+done"
+Codegen,How can you verify if an object is of primitive data type 'number' in JavaScript?42,"function isNumber(value) {
+    return typeof value === 'number';}
+
+const value = 42;
+const result = isNumber(value);
+console.log(`Value '${value}' is of type number: ${result}`);"
+Codegen,"How can I create a linked list in JavaScript, where each node contains an integer value and a reference to the next node?values = [3, 5, 1, 7]","class Node {
+    constructor(value, next = null) {
+        this.value = value;
+        this.next = next;
+    }
+}
+
+function createLinkedList(values) {
+    let head = null;
+    let tail = null;
+
+    for (let value of values) {
+        let node = new Node(value);
+
+        if (!head) {
+            head = node;
+        } else {
+            tail.next = node;
+        }
+
+        tail = node;
+    }
+
+    return head;
+}
+
+const values = [3, 5, 1, 7];
+const linkedList = createLinkedList(values);"
+Codegen,Create a C++ function to check if a given number is a prime number.19,"#include <iostream>
+
+bool isPrime(int number) {
+    if (number <= 1) {
+        return false;
+    }
+    for (int i = 2; i < number; i++) {
+        if (number % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int main() {
+    int number = 19;
+    if (isPrime(number)) {
+        std::cout << number << "" is prime."" << std::endl;
+    } else {
+        std::cout << number << "" is not prime."" << std::endl;
+    }
+    return 0;
+}"
+Codegen,Create a Java method that reverses a given string and demonstrates its usage within the main function.hello world!,"public class StringReverse {
+
+    public static String reverseString(String input) {
+        StringBuilder reversed = new StringBuilder();
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reversed.append(input.charAt(i));
+        }
+        return reversed.toString();
+    }
+
+    public static void main(String[] args) {
+        String input = ""hello world!"";
+        String result = reverseString(input);
+        System.out.println(result);
+    }
+}"
+Codegen,"Explain the purpose of each line of this Python code that calculates the greatest common divisor of two numbers.def gcd(a, b):
+    if b == 0:
+        return a
+    return gcd(b, a % b)","1. The function 'gcd' takes two arguments, a and b.
+2. The base case of the recursion: if b equals 0, return a as the greatest common divisor.
+3. The recursive call: return the greatest common divisor of b and the remainder of a divided by b using the Euclidean algorithm."
+Codegen,Create a Python function to calculate the factorial of a given number using recursion.5,"def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+num = 5
+result = factorial(num)
+print(f'The factorial of {num} is {result}')"
+Codegen,"Implement a sliding window maximum function in C++ that takes a vector of integers and a window size as input, and returns a vector of maximum values for each window.std::vector<int> nums = {1, 3, -1, -3, 5, 3, 6, 7}; int window_size = 3;","#include <vector>
+#include <deque>
+#include <iostream>
+
+std::vector<int> sliding_window_maximum(const std::vector<int>& nums, int window_size) {
+    std::deque<int> dq;
+    std::vector<int> result;
+
+    for (size_t i = 0; i < nums.size(); ++i) {
+        if (!dq.empty() && dq.front() == i - window_size) {
+            dq.pop_front();
+        }
+
+        while (!dq.empty() && nums[dq.back()] < nums[i]) {
+            dq.pop_back();
+        }
+
+        dq.push_back(i);
+
+        if (i >= window_size - 1) {
+            result.push_back(nums[dq.front()]);
+        }
+    }
+    return result;}
+
+int main() {
+    std::vector<int> nums = {1, 3, -1, -3, 5, 3, 6, 7};
+    int window_size = 3;
+
+    std::vector<int> result = sliding_window_maximum(nums, window_size);
+
+    for (const auto& num : result) {
+        std::cout << num << ' ';
+    }}"
+Codegen,How would you write a Shell script to list all directories in the current path?,"#!/bin/bash
+for directory in */; do
+    echo $directory
+done"
+Codegen,Implement a Python script that computes the factorial of a given integer.6,"def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+result = factorial(6)
+print(result)"
+Codegen,"Rewrite the following C# code block using a switch statement instead of if-else blocks.string input = ""A"";
+
+if (input == ""A"")
+{
+    Console.WriteLine(""Apple"");
+}
+else if (input == ""B"")
+{
+    Console.WriteLine(""Banana"");
+}
+else if (input == ""C"")
+{
+    Console.WriteLine(""Cherry"");
+}
+else
+{
+    Console.WriteLine(""Unknown"");
+}","string input = ""A"";
+
+switch (input)
+{
+    case ""A"":
+        Console.WriteLine(""Apple"");
+        break;
+    case ""B"":
+        Console.WriteLine(""Banana"");
+        break;
+    case ""C"":
+        Console.WriteLine(""Cherry"");
+        break;
+    default:
+        Console.WriteLine(""Unknown"");
+        break;
+}"
+Codegen,"How would you write a Shell script that changes the file extension from '.txt' to '.bak' for all files in the current directory?file1.txt, file2.txt, file3.txt","#!/bin/sh
+
+for file in *.txt
+do
+    mv ""$file"" ""${file%.txt}.bak""
+done"
+Codegen,"Debug the given Python code and provide a corrected version.def remove_duplicates(lst):
+  result = []
+  for item in lst:
+    if item not in results:
+      result.append(item)
+  return results
+
+print(remove_duplicates([1, 2, 2, 3, 4, 4]))","def remove_duplicates(lst):
+  result = []
+  for item in lst:
+    if item not in result:
+      result.append(item)
+  return result
+
+print(remove_duplicates([1, 2, 2, 3, 4, 4]))"
+Codegen,How would you implement a simple counter using the useState React Hook in JavaScript?,"import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <h1>{count}</h1>
+      <button onClick={() => setCount(count + 1)}>Increase</button>
+      <button onClick={() => setCount(count - 1)}>Decrease</button>
+    </div>
+  );
+}"
+Codegen,Write a C# function that will calculate the factorial of a given number.6,"using System;
+
+class Program {
+    static int Factorial(int number) {
+        if (number == 1)
+            return 1;
+        else
+            return number * Factorial(number - 1);
+    }
+
+    static void Main(string[] args) {
+        int input = 6;
+        int result = Factorial(input);
+        Console.WriteLine(result);
+    }}"
+Codegen,How would you implement bubble sort in a Python function to sort a given list of integers in ascending order?,"def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n-1):
+        for j in range(n-1-i):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr"
+Codegen,"Create a Python API to query a list of users and filter them based on certain criteria.[{""id"":1,""name"":""Alice"",""age"":30,""city"":""New York""},{""id"":2,""name"":""Bob"",""age"":25,""city"":""Los Angeles""},{""id"":3,""name"":""Charlie"",""age"":22,""city"":""New York""}]
+criteria:{""min_age"":25,""city"":""New York""}","import json
+
+USER_DATA = '[{""id"":1,""name"":""Alice"",""age"":30,""city"":""New York""},{""id"":2,""name"":""Bob"",""age"":25,""city"":""Los Angeles""},{""id"":3,""name"":""Charlie"",""age"":22,""city"":""New York""}]
+
+def filter_users(users, criteria):
+    filtered_users = []
+    for user in users:
+        if user['age'] >= criteria['min_age'] and user['city'] == criteria['city']:
+            filtered_users.append(user)
+    return filtered_users
+
+
+def main():
+    users = json.loads(USER_DATA)
+    criteria = {""min_age"": 25, ""city"": ""New York""}
+    filtered_users = filter_users(users, criteria)
+    print(filtered_users)
+
+if __name__ == '__main__':
+    main()"
+Codegen,"Design a C# method that accepts a list of strings and reverses each word in the list.['apple', 'banana', 'cherry']","using System;
+using System.Collections.Generic;
+
+class Program {
+    static void Main() {
+        List<string> words = new List<string> { ""apple"", ""banana"", ""cherry"" };
+        List<string> reversedWords = ReverseWords(words);
+
+        Console.WriteLine(string.Join("", "", reversedWords));
+    }
+
+    static List<string> ReverseWords(List<string> words) {
+        List<string> reversedWords = new List<string>();
+
+        foreach (string word in words) {
+            char[] arr = word.ToCharArray();
+            Array.Reverse(arr);
+            reversedWords.Add(new string(arr));
+        }
+
+        return reversedWords;
+    }}"
+Codegen,"What's the correct way to write a for loop in C++ that iterates over a vector of integers and prints each element?std::vector<int> numbers = {1, 2, 3, 4, 5};","#include <iostream>
+#include <vector>
+
+int main() {
+  std::vector<int> numbers = {1, 2, 3, 4, 5};
+
+  for (int number : numbers) {
+    std::cout << number << std::endl;
+  }
+
+  return 0;
+}"
+Codegen,"What is the output of this C++ code snippet?#include <iostream>
+
+int main() {
+    int a = 7;
+    int b = 3;
+    int c = a / b;
+    int d = b * c;
+    std::cout << d << std::endl;
+    return 0;
+}",The output of this C++ code snippet will be 6.
+Codegen,"How would you implement a function in JavaScript to find the largest and smallest numbers in a given array?const arr = [34, 15, 88, 2, 25, 60, 7];","function findMinAndMax(arr) {
+    let min = arr[0], max = arr[0];
+    for (const num of arr) {
+        if (num < min) {
+            min = num;
+        } else if (num > max) {
+            max = num;
+        }
+    }
+    return { min, max };
+}"
+Codegen,"Identify and correct errors in the following C++ code snippet.#include <iostream>
+using namespace std;
+
+int main()|
+    int value;
+    cin << value;
+    cout >> ""The value is:"" << value;
+
+    return 0;
+}","#include <iostream>
+using namespace std;
+
+int main() {
+    int value;
+    cin >> value;
+    cout << ""The value is:"" << value;
+
+    return 0;
+}"
+Codegen,"Design a Java class representing a simple bank account with methods for depositing, withdrawing, and checking the balance.Initial balance: 1000
+Deposit: 500
+Withdraw: 200","public class BankAccount {
+    private double balance;
+
+    public BankAccount(double initialBalance) {
+        this.balance = initialBalance;
+    }
+
+    public void deposit(double amount) {
+        balance += amount;
+    }
+
+    public void withdraw(double amount) {
+        if (balance >= amount) {
+            balance -= amount;
+        } else {
+            System.out.println(""Insufficient funds."");
+        }
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount(1000);
+        account.deposit(500);
+        account.withdraw(200);
+        System.out.println(""Current balance: "" + account.getBalance());
+    }}"
+Codegen,Implement a Shell script to count the number of files and directories in a given directory./usr/local/bin,"#!/bin/bash
+
+target_directory='/usr/local/bin'
+directories_count=0
+files_count=0
+
+for entry in ""$target_directory""/*; do
+    if [ -d ""$entry"" ]; then
+        directories_count=$((directories_count+1))
+    elif [ -f ""$entry"" ]; then
+        files_count=$((files_count+1))
+    fi
+done
+
+echo ""Directories count: $directories_count""
+echo ""Files count: $files_count"""
+Codegen,Create a Python script that reads a CSV file and prints the contents to the console using the csv library.sample.csv,"import csv
+
+filename = 'sample.csv'
+
+with open(filename, mode='r') as file:
+    csv_reader = csv.reader(file)
+    for row in csv_reader:
+        print(', '.join(row))"
+Codegen,"Write a Python function that calculates the distance between two points using the Euclidean distance formula.point1 = (3, 4)
+point2 = (7, 8)","def euclidean_distance(point1, point2):
+    import math
+    return math.sqrt((point1[0] - point2[0])**2 + (point1[1] - point2[1])**2)
+
+distance = euclidean_distance(point1, point2)
+print(distance)"
+Codegen,"Write a Python script that reads a text file, counts the occurrences of each word, and prints out the word frequencies.The quick brown fox jumped over the lazy dog. The quick brown dog jumped back.","from collections import Counter
+
+filename = 'input.txt'
+
+with open(filename, 'r') as file:
+    content = file.read()
+    words = content.lower().split()
+    word_count = Counter(words)
+
+print(word_count)"
+Codegen,Generate a PHP code snippet that demonstrates how to validate an email address.john@example.com,"<?php
+
+$email = ""john@example.com"";
+
+if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo ""Valid email address."";} else {
+    echo ""Invalid email address."";}
+
+?>"
+Codegen,"Create a Java method that takes an array of strings as input and returns the longest word in the array.[""hello"", ""world"", ""java"", ""programming""]","public String findLongestWord(String[] words) {
+    String longestWord = """";
+    for (String word : words) {
+        if (word.length() > longestWord.length()) {
+            longestWord = word;
+        }
+    }
+    return longestWord;
+}"
+Codegen,What would a shell script look like that counts the number of lines in a file and prints the result?file.txt,"#!/bin/bash
+file=""file.txt""
+line_count=$(wc -l < ""$file"")
+echo ""The file $file has $line_count lines."""
+Codegen,"In Java, design a class named Rectangle with two private integer properties width and height, write a constructor to initialize them and add a public method to calculate the area of the rectangle.","public class Rectangle {
+
+    private int width;
+    private int height;
+
+    public Rectangle(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    public int area() {
+        return width * height;
+    }
+}"
+Codegen,"Create a JavaScript function that takes an array of numbers and returns the array with duplicates removed.let numbers = [1, 2, 3, 2, 4, 5, 1]","function removeDuplicates(arr) {
+    return [...new Set(arr)];
+}"
+Codegen,"Translate the following JavaScript code snippet to a Python equivalent: `const a = [1, 2, 3]; const b = [4, 5, 6]; const c = [...a, ...b]; console.log(c);`","a = [1, 2, 3]
+b = [4, 5, 6]
+c = a + b
+print(c)"
+Codegen,"Translate the following Python code into equivalent JavaScript code.def slice_string(input_string, start, end):
+    return input_string[start:end]","function sliceString(inputString, start, end) {
+    return inputString.slice(start, end);
+}"
+Codegen,"Create a Python function that takes a list of strings and returns a dictionary with the frequency of each word.['apple', 'orange', 'banana', 'apple', 'orange', 'apple']","def word_freq(words):
+    freq = {}
+    for word in words:
+        freq[word] = freq.get(word, 0) + 1
+    return freq
+
+input_list = ['apple', 'orange', 'banana', 'apple', 'orange', 'apple']
+print(word_freq(input_list))"
+Codegen,"Implement a C++ function that computes the greatest common divisor (GCD) of two integers using Euclidean algorithm.48, 18","#include <iostream>
+
+int euclideanGCD(int a, int b) {
+    if (b == 0) {
+        return a;
+    }
+    return euclideanGCD(b, a % b);
+}
+
+int main() {
+    int a = 48;
+    int b = 18;
+    std::cout << ""GCD of "" << a << "" and "" << b << "" is "" << euclideanGCD(a, b) << std::endl;
+}"
+Codegen,"Create a Python program that converts a temperature from Fahrenheit to Celsius and vice versa based on user input.75, 'F'","def convert_temperature(value, unit):
+    if unit.upper() == 'F':
+        celsius = (value - 32) * 5/9
+        return celsius
+    elif unit.upper() == 'C':
+        fahrenheit = (value * 9/5) + 32
+        return fahrenheit
+
+temp_value = 75
+temp_unit = 'F'
+converted_temp = convert_temperature(temp_value, temp_unit)
+print(converted_temp)"
+Codegen,Write a Python function that takes a string and reverses the order of the words in the sentence.This is a simple sentence.,"def reverse_words(s):
+    words = s.split()
+    reversed_words = ' '.join(reversed(words))
+    return reversed_words
+
+input_str = ""This is a simple sentence.""
+output_str = reverse_words(input_str)
+print(output_str)"
+Codegen,"Given a C++ code snippet, identify any syntax errors and provide corrected code.#include <iostream>
+
+int main() {
+std::cout << ""Hello World!"" << std::endl;
+return 0
+}","#include <iostream>
+
+int main() {
+    std::cout << ""Hello World!"" << std::endl;
+    return 0;
+}"
+Codegen,What would be an appropriate Java code for checking if a given number is a palindrome?12321,"public class PalindromeChecker {
+
+    public static void main(String[] args) {
+        int num = 12321;
+        System.out.println(isPalindrome(num));
+    }
+
+    public static boolean isPalindrome(int num) {
+        int reversedNum = 0;
+        int originalNum = num;
+
+        while (num != 0) {
+            int digit = num % 10;
+            reversedNum = reversedNum * 10 + digit;
+            num /= 10;
+        }
+
+        return originalNum == reversedNum;
+    }
+}"
+Codegen,Can you provide a Python code that calculates the nth number in the Fibonacci sequence using dynamic programming?20,"def fibonacci(n): 
+    fib = [0] * (n+1) 
+    fib[1] = 1
+
+    for i in range(2, n+1): 
+        fib[i] = fib[i-1] + fib[i-2] 
+    return fib[n]
+
+n = 20
+result = fibonacci(n)
+print(f""The {n}th number in the Fibonacci sequence is {result}"")"
+Codegen,"Create a JavaScript function that counts the number of occurrences of each character in a given string, and returns an object containing the character count pairs.abracadabra","function countCharacters(str) {
+  const count = {};
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+    if (count[char]) {
+      count[char]++;
+    } else {
+      count[char] = 1;
+    }
+  }
+  return count;
+}
+
+const input = 'abracadabra';
+console.log(countCharacters(input));"
+Codegen,Implement a Python program that reads a CSV file and prints each row in reverse.example.csv,"import csv
+
+def reverse_print_csv(file_name):
+    with open(file_name, mode='r') as csv_file:
+        csv_reader = csv.reader(csv_file)
+
+        for row in csv_reader:
+            print(row[::-1])
+
+file_name = 'example.csv'
+reverse_print_csv(file_name)"
+Codegen,"Create a Java function to calculate the area of a triangle, given its base and height.","public double triangleArea(double base, double height) {
+  return (base * height) / 2;
+}"
+Codegen,"Design a C# program that finds the unique elements in an array of integers and prints them.[1, 0, 2, 1, 2, 3]","using System;
+using System.Collections.Generic;
+
+class UniqueElements {
+    public static void Main(String[] args) {
+        int[] arr = new int[] {1, 0, 2, 1, 2, 3};
+        HashSet<int> unique = new HashSet<int>();
+
+        foreach (int num in arr) {
+            unique.Add(num);
+        }
+
+        Console.WriteLine(""Unique elements in the array:"");
+        foreach (int num in unique) {
+            Console.Write(num + "" "");
+        }
+    }}"
+Codegen,Create a Java function that calculates the factorial of a given integer.5,"public static long factorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+int number = 5;
+long result = factorial(number);
+System.out.println(""Factorial of "" + number + "" is "" + result);"
+Codegen,"Create a JavaScript function that filters an array of strings by removing any words that are shorter than a given length.words = [""apple"", ""bat"", ""peach"", ""dog"", ""cat""], length = 4","function filterByLength(words, minLength) {
+    return words.filter(word => word.length >= minLength);}
+
+const words = [""apple"", ""bat"", ""peach"", ""dog"", ""cat""];
+const minLength = 4;
+const filtered = filterByLength(words, minLength);
+console.log(filtered);"
+Codegen,"Rewrite the following Python code to use a list comprehension instead of a for loop:
+
+numbers = [1, 2, 3, 4, 5]
+squares = []
+for number in numbers:
+  squares.append(number * number)
+print(squares)","numbers = [1, 2, 3, 4, 5]
+squares = [number * number for number in numbers]
+print(squares)"
+Codegen,"Translate the following Python code into C# code that produces the same output.def reverse_string(s):
+    return s[::-1]
+
+print(reverse_string('Hello'))","using System;
+
+namespace ConsoleApp {
+    class Program {
+        static void Main(string[] args) {
+            Console.WriteLine(ReverseString(""Hello""));
+        }
+
+        static string ReverseString(string s) {
+            char[] charArray = s.ToCharArray();
+            Array.Reverse(charArray);
+            return new string(charArray);
+        }
+    }
+}"
+Codegen,"Can you write a JavaScript code to remove duplicates from an array?[1, 2, 3, 2, 1, 4, 3]","function removeDuplicates(arr) {
+    let uniqueArray = [...new Set(arr)];
+    return uniqueArray;}
+
+let inputArray = [1, 2, 3, 2, 1, 4, 3];
+let outputArray = removeDuplicates(inputArray);
+console.log(outputArray);"
+Codegen,"Translate the following Python code to C++ code.def sum_numbers(nums):
+    total = 0
+    for num in nums:
+        total += num
+    return total","#include <vector>
+
+int sum_numbers(const std::vector<int>& nums) {
+    int total = 0;
+    for (int num : nums) {
+        total += num;
+    }
+    return total;
+}"
+Codegen,"In JavaScript, how can you remove an element with a given id from the DOM?Element id: 'remove-me'","var element = document.getElementById('remove-me');
+if (element) {
+    element.parentNode.removeChild(element);
+}"
+Codegen,Create a Python function that determines if a given number is a palindrome.121,"def is_palindrome(num):
+    num_str = str(num)
+    reversed_num_str = num_str[::-1]
+    return num_str == reversed_num_str
+
+number = 121
+if is_palindrome(number):
+    print(f'{number} is a palindrome.')
+else:
+    print(f'{number} is not a palindrome.')"
+Codegen,Write a function in C++ to find the largest element in a given array using pointers.,"#include <iostream>
+using namespace std;
+
+int findLargest(int* arr, int size) {
+    int max = *arr;
+    for(int i = 1; i < size; ++i) {
+        if(*(arr + i) > max) {
+            max = *(arr + i);
+        }
+    }
+    return max;
+}"
+Codegen,How would you implement a basic login system in Node.js using Express and bcrypt for hashing passwords?,"const express = require('express');
+const bcrypt = require('bcrypt');
+const app = express();
+
+app.use(express.json());
+
+const users = [];
+
+app.post('/register', async (req, res) => {
+    try {
+        const hashedPassword = await bcrypt.hash(req.body.password, 10);
+        const user = { name: req.body.name, password: hashedPassword };
+        users.push(user);
+        res.status(201).json({ message: 'User created successfully' });
+    } catch {
+        res.status(500).json({ message: 'Error registering user' });
+    }
+});
+
+app.post('/login', async (req, res) => {
+    const user = users.find(u => u.name === req.body.name);
+    if (!user) {
+        return res.status(400).json({ message: 'User not found' });
+    }
+
+    try {
+        if (await bcrypt.compare(req.body.password, user.password)) {
+            res.status(200).json({ message: 'Login successful' });
+        } else {
+            res.status(401).json({ message: 'Invalid password' });
+        }
+    } catch {
+        res.status(500).json({ message: 'Error logging in' });
+    }
+});
+
+app.listen(3000);"
+Codegen,"Write a C++ program that reads in three integer values from the user and displays their sum.4, 10, 6","#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c, sum;
+    cout << ""Enter three integer values: "";
+    cin >> a >> b >> c;
+    sum = a + b + c;
+    cout << ""The sum is: "" << sum << endl;
+    return 0;}"
+Codegen,"Create a JavaScript function that receives an object with keys representing user names and values representing their ages. Return an array of user names whose age is greater than or equal to 18.{ 'Alex': 20, 'Brian': 17, 'Cindy': 19 }","function adults(users) {
+    const adultUsers = [];
+    for (const [name, age] of Object.entries(users)) {
+        if (age >= 18) {
+            adultUsers.push(name);
+        }
+    }
+    return adultUsers;
+}
+
+const inputObj = { 'Alex': 20, 'Brian': 17, 'Cindy': 19 };
+const result = adults(inputObj);
+console.log(result);"
+Codegen,"Create a Java method that takes a string input and outputs the string in reverse order.string_input: 'Hello, World!'","public String reverseString(String s) {
+    StringBuilder reversed = new StringBuilder();
+    for (int i = s.length() - 1; i >= 0; i--) {
+        reversed.append(s.charAt(i));
+    }
+    return reversed.toString();
+}"
+Codegen,"Translate the following C++ code snippet into equivalent Java code: 'void print_sum(int a, int b) { int sum = a + b; cout << ""The sum is: "" << sum << endl; }'","public void print_sum(int a, int b) {
+    int sum = a + b;
+    System.out.println(""The sum is: "" + sum);
+}"
+Codegen,"Construct a C++ program that reads user input for two integers and outputs their greatest common divisor.56, 98","#include <iostream>
+using namespace std;
+
+int gcd(int a, int b) {
+    if (b == 0)
+        return a;
+    return gcd(b, a % b);
+}
+
+int main() {
+    int num1, num2;
+    cout << ""Enter two integers: "";
+    cin >> num1 >> num2;
+
+    int result = gcd(num1, num2);
+    cout << ""GCD of "" << num1 << "" and "" << num2 << "" is "" << result << endl;
+
+    return 0;
+}"
+Codegen,Create an HTTP GET request in JavaScript using the Fetch API to retrieve data from the following URL: 'https://jsonplaceholder.typicode.com/todos/1',"fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));"
+Codegen,How can I implement a stack data structure in Python?,"class Stack:
+    def __init__(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        if not self.is_empty():
+            return self.items.pop()
+
+    def peek(self):
+        if not self.is_empty():
+            return self.items[-1]
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def size(self):
+        return len(self.items)"
+Codegen,"Write a SQL query to update the salary of all employees in the 'employees' table by 10%, and then select their names and updated salaries.","UPDATE employees SET salary = salary * 1.10;
+SELECT name, salary FROM employees;"
+Codegen,"Translate the following Python code to C++ code: 
+
+```
+def hello_world():
+    print(""Hello, World!"")
+
+hello_world()
+```","#include <iostream>
+
+void hello_world() {
+    std::cout << ""Hello, World!"" << std::endl;
+}
+
+int main() {
+    hello_world();
+    return 0;
+}"
+Codegen,Construct a C++ program that asks for user input consisting of a number n and then calculates the factorial of n.6,"#include <iostream>
+
+using namespace std;
+
+long long int factorial(int n) {
+    if (n == 0 || n == 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);}
+
+int main() {
+    int n;
+    cout << 'Enter a number: ';
+    cin >> n;
+    cout << 'Factorial of ' << n << ' is ' << factorial(n) << endl;
+    return 0;}"
+Codegen,"Construct an SQL query that selects all records from the 'employees' table with a salary between 50000 and 100000, ordered by their last name.",SELECT * FROM employees WHERE salary >= 50000 AND salary <= 100000 ORDER BY last_name;
+Codegen,How would you implement a recursive function in PHP that computes the nth Fibonacci number?6,"<?php
+function fibonacci($n) {
+    if ($n <= 1) {
+        return $n;
+    }
+    return fibonacci($n - 1) + fibonacci($n - 2);}
+
+$n = 6;
+echo ""The "" . $n . ""th Fibonacci number is: "" . fibonacci($n);
+?>"
+Codegen,Create a Java function that checks if a number is prime and returns a boolean.17,"public static boolean isPrime(int num) {
+    if (num <= 1) {
+        return false;
+    }
+    for (int i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int number = 17;
+boolean result = isPrime(number);
+System.out.println(result);"
+Codegen,Write a shell script that lists all the files in a directory and their size in bytes./path/to/directory,"#!/bin/bash
+directory=""/path/to/directory""
+
+for file in ""$directory""/*
+do
+    size=$(stat -c%s ""$file"")
+    echo ""$file - $size bytes""
+done
+"
+Codegen,How would you create a Python script to read the content of a file line by line?file.txt,"with open('file.txt', 'r') as file:
+    for line in file:
+        print(line.strip())"
+Codegen,"Can you identify the syntax error in the given Java code and fix it?public class HelloWorld {
+    public static void main(String[] args) 
+        System.out.println(""Hello, world!"");
+    }
+}","public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println(""Hello, world!"");
+    }
+}"
+Codegen,Can you provide a Python function to calculate the nth Fibonacci number using recursion?6,"def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+n = 6
+result = fibonacci(n)
+print(result)"
+Codegen,Implement a C# function that calculates the nth Fibonacci number using memoization. You may assume the provided function signature and an appropriate Dictionary to store previously calculated values.8,"using System;
+using System.Collections.Generic;
+
+public static class Fibonacci
+{   
+    static Dictionary<int, int> cache = new Dictionary<int, int>();
+
+    public static int MemoizedFibonacci(int n)
+    {
+        if (n <= 1) return n;
+        if (!cache.ContainsKey(n))
+        {
+            cache[n] = MemoizedFibonacci(n - 1) + MemoizedFibonacci(n - 2);
+        }
+        return cache[n];
+    }
+
+    public static void Main(string[] args)
+    {
+        int num = 8;
+        Console.WriteLine(MemoizedFibonacci(num));
+    }}"
+Codegen,Create a Python function that accepts a string and reverses the words in it. Test it with the input string provided.Hello world I am a chatbot,"def reverse_words(s):
+    words = s.split()
+    reversed_words = ' '.join(reversed(words))
+    return reversed_words
+
+input_string = 'Hello world I am a chatbot'
+result = reverse_words(input_string)
+print(result)"
+Codegen,"Debug the following JavaScript code to make sure the function properly reverses a given string.
+
+```
+function reverseString(str) {
+  return str.split('').reverse('').join('');
+}
+```function reverseString(str) {
+  return str.split('').reverse('').join('');
+}","function reverseString(str) {
+  return str.split('').reverse().join('');
+}"
+Codegen,Create a Java method to calculate the area of a triangle using its base and height as input parameters.,"public class TriangleArea {
+    public static double calculateArea(double base, double height) {
+        return 0.5 * base * height;
+    }
+
+    public static void main(String[] args) {
+        double base = 10;
+        double height = 5;
+        double area = calculateArea(base, height);
+        System.out.println(""Area of the triangle: "" + area);
+    }
+}"
+Codegen,Write a shell script to calculate the sum of all positive integers less than a given number which are divisible by either 3 or 5.20,"#!/bin/bash
+
+number=20
+sum=0
+
+for i in $(seq 1 $((number - 1))); do
+    if [ $((i % 3)) -eq 0 ] || [ $((i % 5)) -eq 0 ]; then
+        sum=$((sum + i))
+    fi
+done
+
+printf 'Sum of integers less than 20 that are divisible by 3 or 5: %d\n' $sum"

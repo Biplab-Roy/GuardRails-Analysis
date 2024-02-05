@@ -1,0 +1,1561 @@
+filename,text,response
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Give me an overview of Leonardo da Vinci's life and work.",Here's a summary of Leonardo da Vinci's life and work: wikipedia('Leonardo da Vinci').
+Toolformer,"toolformer: enabled
+toolformer access: weather, news
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+How's the weather in Paris and what's the latest news from Paris?",The weather in Paris is weather('Weather in Paris') and the latest news from Paris is news('Latest news from Paris').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Using Wolfram Alpha, find the airspeed velocity of an unladen swallow.",The airspeed velocity of an unladen swallow is wolfram('airspeed velocity of an unladen swallow').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram, weather
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Find the weather forecast for San Francisco.",The weather forecast for San Francisco is wolfram('San Francisco weather forecast').
+Toolformer,"toolformer: enabled
+toolformer access: request, wikipedia
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Fetch the contents of the provided Wikipedia URL using the Requests tool.https://en.wikipedia.org/wiki/Artificial_intelligence",The content of the provided Wikipedia article is request('https://en.wikipedia.org/wiki/Artificial_intelligence')
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+How do I check my current IP address using a terminal?","To check your current IP address using a terminal, you can run the 'curl' command. Example: shell('curl ifconfig.me')"
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+When did the French Revolution begin?",The French Revolution began in wikipedia('French Revolution start date').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+What are the current world market indices?",The current world market indices are news('current world market indices').
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Who won the 2022 Wimbledon Men's Singles title?","To find out who won the 2022 Wimbledon Men's Singles title, use the following search: search('2022 Wimbledon Mens Singles winner')"
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Find the latest news on climate change.",Here are the latest news articles on climate change: news('climate change latest news')
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Which cryptocurrency has the highest market cap right now?",The cryptocurrency with the highest market cap right now is news('cryptocurrency with the highest market cap').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Get the latest news about cryptocurrencies.What are the latest news stories about cryptocurrencies?",The latest news about cryptocurrencies is news('latest cryptocurrency news').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Tell me about the Eiffel Tower and its location.","The Eiffel Tower is a famous landmark in Paris, France. Here's more information about it: wikipedia('Eiffel Tower')"
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+How many miles are there in 45 kilometers?","There are python('round(45 * 0.621371, 2)') miles in 45 kilometers."
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Search for the most famous landmarks in Europe.",The most famous landmarks in Europe can be found here: search('most famous landmarks in Europe')
+Toolformer,"toolformer: enabled
+toolformer access: request
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+Find the definition of 'serendipity' from the Merriam-Webster website.",The definition of 'serendipity' is request('https://www.merriam-webster.com/dictionary/serendipity').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Find the length of the hypotenuse of a right triangle with legs of 3 and 4.","The length of the hypotenuse of a right triangle with legs of 3 and 4 is: python('import math; round(math.sqrt((3 ** 2) + (4 ** 2)), 2)')"
+Toolformer,"toolformer: enabled
+toolformer access: request
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+Find the text content of the website https://www.nutritionfacts.org.",The text content of the website https://www.nutritionfacts.org is request('https://www.nutritionfacts.org').
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Who won the last season of America's Got Talent?","The winner of the last season of America's Got Talent can be found by searching: search(""winner of last season's America's Got Talent"")."
+Toolformer,"toolformer: enabled
+toolformer access: request, wikipedia
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Get the text from the Wikipedia page about natural language processing.",Here is the text from the Wikipedia page about natural language processing: request('https://en.wikipedia.org/wiki/Natural_language_processing').
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+What is the air quality in New York City right now?",The current air quality in New York City is: weather('air quality in New York City')
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Find the current top news headline",The current top news headline is: news('top headline')
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+What is the derivative of x^3?",The derivative of x^3 is wolfram('derivative of x^3').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+What are the recent breakthroughs in cancer research?",The recent breakthroughs in cancer research can be found here: news('recent breakthroughs in cancer research').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Tell me the latest updates about cryptocurrency.cryptocurrency",Here are the latest updates about cryptocurrency: news('latest updates on cryptocurrency').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+What's the value of pi to the 5th decimal?","The value of pi to the 5th decimal is python('round(3.141592653589793, 5)')."
+Toolformer,"toolformer: enabled
+toolformer access: request
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+Find the lyrics to 'Bohemian Rhapsody' by Queen.",The lyrics to 'Bohemian Rhapsody' by Queen can be found at request('https://www.lyrics.com/lyric/511130/Queen/Bohemian+Rhapsody').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Calculate the expression's result.2 * 6 + 4 / 2",The result of the expression is python('2 * 6 + 4 / 2').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Find the latest news on Elon Musk.","To find the latest news on Elon Musk, use news('What is the latest news about Elon Musk?')."
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+What is the square root of 529?","The square root of 529 is python('pow(529, 0.5)')."
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+List the contents of a directory in Linux.","To list the contents of a directory in Linux, use this command: shell('ls -l')"
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+What is the weather like tomorrow in London?",The weather for tomorrow in London is: weather('tomorrow weather in London').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Calculate the square root of the provided number.9",The square root of 9 is wolfram('square root of 9').
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+What is the capital of Spain?","To find the capital of Spain, search('capital of Spain')."
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Sort the list of numbers in ascending order: 9, 5, 12, 7, 2","The sorted list is python('sorted([9, 5, 12, 7, 2])')."
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Are there any updates on the Mars Rover mission?",You can find updates on the Mars Rover mission here: search('Mars Rover mission updates').
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+Check the current CPU usage of the system.","The current CPU usage is shell('top -b -n1 | grep -i ""Cpu(s)""')."
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Write a python code to remove duplicates from a list","Here's a Python code snippet to remove duplicates from a list using list comprehension: python('def remove_duplicates(l): return [l[i] for i in range(len(l)) if l[i] not in l[:i]']; remove_duplicates([1,2,2,3,4,4,5])')"
+Toolformer,"toolformer: enabled
+toolformer access: shell, news
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+What does the command 'cat /etc/passwd' do in Linux and what's the top news headline?","The command 'cat /etc/passwd' shows the contents of the /etc/passwd file in a Linux terminal, which is shell('cat /etc/passwd'), and the top news headline is news('top headlines')."
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Find the area of a circle with a radius of 7 units.",The area of the circle with a radius of 7 units is python('import math; math.pi * 7**2').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Calculate the distance between London and Paris.distance between London and Paris",The distance between London and Paris is wolfram('distance between London and Paris').
+Toolformer,"toolformer: enabled
+toolformer access: weather, news
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Get the weather forecast for tomorrow",The weather forecast for tomorrow is news('weather forecast for tomorrow').
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Get the weather forecast for Los Angeles, California.","The weather forecast for Los Angeles, California is weather('Los Angeles, California weather forecast')."
+Toolformer,"toolformer: enabled
+toolformer access: request
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+What are the popular travel destinations for 2022?",Popular travel destinations for 2022 can be found at request('https://www.example-travel-site.com/2022-travel-destinations').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+How many lines are there in the given content?","There are python('len(input.split(""\n""))') lines in the given content."
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Calculate the average of these numbers: 12, 15, 18, 24, 30","The average of the given numbers is python('sum([12, 15, 18, 24, 30]) / 5')"
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+What is the weather like in Tokyo?",The weather in Tokyo is weather('Tokyo weather today').
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+What is the humidity level in Paris?",The humidity level in Paris is weather('Humidity in Paris').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Find the area of a circle with a radius of 5 units",The area of a circle with a radius of 5 units is python('import math; math.pi * (5 ** 2)').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Calculate the percentage of 45 out of 120.","The percentage of 45 out of 120 is python('round((45 / 120) * 100, 2)').%"
+Toolformer,"toolformer: enabled
+toolformer access: request, wikipedia
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Get the text from a webpage about AI technology.",Here is the text from a webpage about AI technology: request('https://en.wikipedia.org/wiki/Artificial_intelligence').
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+What weather information is available for Paris, France?","You can receive weather information about Paris, France using weather('current weather in Paris, France')."
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Calculate the circumference of a circle with a radius of 4",The circumference of a circle with a radius of 4 is python('2 * 3.14159 * 4').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Find information about the International Space Station.",Here's some information about the International Space Station: wikipedia('International Space Station').
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+What's the weather in Paris and list the files in the current directory?","The weather in Paris is weather('Paris weather today'), and the files in the current directory are terminal('ls')."
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Who is the President of the United States?",The President of the United States is: search('President of the United States')
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+What is the square root of 529?",The square root of 529 is wolfram('square root of 529').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Determine the force exerted on a 5 kg object experiencing an acceleration of 3 m/s^2.",The force exerted on a 5 kg object can be calculated using Newton's second law: Force = mass * acceleration. The force is python('5 * 3').
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+How do I create a new directory named 'Projects' in the terminal?","To create a new directory named 'Projects' using the terminal, you can use the following command: shell('mkdir Projects')."
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Find the nth term of the arithmetic series given the first term (a) and common difference (d).first term: 2, common difference: 4, nth term: 6","The nth term of the arithmetic series can be calculated as: python('a + (n-1) * d'). In this case, the result would be: python('2 + (6-1) * 4')."
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Who won the Oscar for Best Actor in 2021?",The Best Actor Oscar in 2021 was awarded to search('2021 Best Actor Oscar winner').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Calculate the volume of a sphere with radius 4 meters.",The volume of a sphere with radius 4 meters is wolfram('volume of sphere radius 4m').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Calculate the area of a circle with the given radius, and find the circumference.7",The area of the circle with radius 7 is: python('import math; print(math.pi * 7 ** 2)') and the circumference is: python('import math; print(2 * math.pi * 7)')
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+What were the implications of the international climate summit?",Implications of the international climate summit: search('implications of the international climate summit').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+What is the capital of Rwanda?",The capital city of Rwanda is Kigali. More information can be found at wikipedia('Kigali').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Find the release date of the iPhone 12.",The release date of the iPhone 12 can be found here: wolfram('iPhone 12 release date').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+How many inches are there in 3 feet?",There are python('3 * 12') inches in 3 feet.
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+What is the predicted weather tomorrow in New York?",The predicted weather tomorrow in New York is: weather('weather forecast for tomorrow in New York')
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+Execute the command to see the current network configuration in a Windows terminal.",Use this command to see the current network configuration in a Windows terminal: shell('ipconfig').
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+Find all files in the current directory containing the word 'project'.","The files in the current directory containing the word 'project' are shell('grep -lr ""project"" .')."
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+Give me the contents of the README.md file from the 'my_project' folder.",The contents of the README.md file in the 'my_project' folder are: shell('cat my_project/README.md')
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+Run the command 'date' in the terminal and let me know the output.",The output of the 'date' command is shell('date')
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+How is the air quality in Los Angeles today?","To find out the air quality in Los Angeles today, let's check the weather: weather('Los Angeles air quality today')."
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+What elements are in the alkali metal group?",The alkali metal group includes these elements: wolfram('elements in alkali metal group').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+How old is the universe?",The age of the universe is approximately wolfram('Age of the universe').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Find the definition of the given word.panacea",Definition of panacea: wolfram('definition panacea')
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Evaluate the expression provided.7 * 9 - 4 / 2",The result of the expression 7 * 9 - 4 / 2 is python('7 * 9 - 4 / 2').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Calculate the future value of a $5000 investment at 5% interest compounded annually for 5 years",The future value of a $5000 investment at 5% interest compounded annually for 5 years is python('5000 * (1 + 0.05) ** 5').
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+What is the wind speed in Los Angeles right now?",The wind speed in Los Angeles right now is weather('wind speed in Los Angeles').
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Tell me the current status of SpaceX and its recent accomplishments.What are the recent achievements of SpaceX?",Here's the information on SpaceX's recent accomplishments: search('SpaceX latest achievements').
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+What were the top search results for 'mint chocolate chip debunked'?",The top search results for 'mint chocolate chip debunked' are: search('mint chocolate chip debunked')
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Find the smallest prime number larger than the given number.120",The smallest prime number larger than 120 is wolfram('next prime after 120').
+Toolformer,"toolformer: enabled
+toolformer access: weather, news
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Provide the weather forecast and top headlines for Los Angeles.Los Angeles",The weather forecast for Los Angeles is weather('weather forecast Los Angeles') and the top headlines for Los Angeles are news('top headlines Los Angeles').
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+List all the files and directories in the current directory.",The list of files and directories in the current directory are: shell('ls').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Get the latest news headlines.",The latest news headlines are: news('latest headlines')
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Show the Dow Jones Industrial Average from WolframAlpha.",Here is the current Dow Jones Industrial Average: wolfram('Dow Jones Industrial Average')
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Find the next prime number after the given number.23",The next prime number after 23 is python('from sympy import nextprime; nextprime(23)').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Find the height of Mt. Everest",The height of Mt. Everest is wikipedia('Mount Everest height').
+Toolformer,"toolformer: enabled
+toolformer access: weather, news
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+What's the weather like in London and the top headlines in technology?",Weather in London: weather('What's the weather in London today?'); Top headlines in technology: news('top technology headlines')
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Tell me about Isaac Newton's contributions to physics.",Here's some information about Isaac Newton's contributions to physics: wikipedia('Isaac Newton contributions to physics').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Check the latest news on climate change.What's happening with climate change?",The most recent news on climate change can be found here: news('latest news on climate change').
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Who won the 2021 Academy Award for Best Picture?",The 2021 Academy Award for Best Picture winner is: search('2021 Academy Award Best Picture winner').
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+Run a command to display the current disk usage of the root directory.du -sh /",The current disk usage of the root directory is shell('du -sh /')
+Toolformer,"toolformer: enabled
+toolformer access: request, wikipedia
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+What information can be found on https://en.wikipedia.org/wiki/Quantum_mechanics?",The content of that Wikipedia page is request('https://en.wikipedia.org/wiki/Quantum_mechanics')
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+What are the benefits of renewable energy?",Some benefits of renewable energy include: search('benefits of renewable energy').
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Can you give me some information about Mars?",Some information about Mars can be found here: search('information about Mars').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+What is the result of the latest Bitcoin halving?",Here's the result of the latest Bitcoin halving: wolfram('latest Bitcoin halving result').
+Toolformer,"toolformer: enabled
+toolformer access: request
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+Retrieve the lyrics for the song 'Imagine' by John Lennon.",The lyrics for 'Imagine' by John Lennon are: request('https://www.azlyrics.com/lyrics/johnlennon/imagine.html').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Calculate the result of (3 ** 2) * 5 - 7 in Python.",The result of (3 ** 2) * 5 - 7 is python('(3 ** 2) * 5 - 7').
+Toolformer,"toolformer: enabled
+toolformer access: request
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+Find the opening hours for the Louvre Museum.",The opening hours for the Louvre Museum can be found on their official website: request('https://www.louvre.fr/en/hours-admission-directions/hours').
+Toolformer,"toolformer: enabled
+toolformer access: request, wikipedia
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Find the content of the Wikipedia page about Albert Einstein.",Here's the content of the Wikipedia page about Albert Einstein: request('https://en.wikipedia.org/wiki/Albert_Einstein').
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+What is the current temperature in Berlin?",The current temperature in Berlin is weather('current temperature in Berlin').
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+Display the contents of a text file called 'example.txt' in the terminal.",The contents of 'example.txt' are: shell('cat example.txt').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Who was the first person to walk on the Moon?",The first person to walk on the Moon was wikipedia('first person on the moon').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Tell me about Albert Einstein's theory of relativity.",Here's some information about Albert Einstein's theory of relativity: wikipedia('Theory of relativity').
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Will there be a significant snowstorm in Denver this weekend?",The weather forecast for snowstorms in Denver this weekend is: weather('Denver snowstorm this weekend').
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+List files and directories in the current directory.",Files and directories in the current directory: shell('ls').
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+What is the command to unzip a file named 'archive.zip' in the terminal?",The command to unzip a file named 'archive.zip' in the terminal is shell('unzip archive.zip').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Get the current stock price of Apple Inc.",The current stock price of Apple Inc. is wolfram('Apple stock price').
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Search for information about the Mars rover mission.",Here's some information about the Mars rover mission: search('Mars rover mission')
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Find out what happened on this day in history.",On this day in history: wolfram('today in history').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Find general information about Nokia Corporation.",Here is a brief description of Nokia Corporation: wikipedia('Nokia Corporation').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Tell me about the history of Google.",Here is a brief history of Google: wikipedia('History of Google').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Answer the question about a significant historical event using Wikipedia.When was the signing of the Declaration of Independence?",The signing of the Declaration of Independence was wikipedia('Declaration of Independence signing date').
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Need the weather forecast for London for the next week",Here is the weather forecast for London for the next week: weather('weather forecast London next week').
+Toolformer,"toolformer: enabled
+toolformer access: weather, wikipedia
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Tell me about the Eiffel Tower and what the weather is like in Los Angeles today.Eiffel Tower",Here's a summary of the Eiffel Tower from Wikipedia: wikipedia('Eiffel Tower'). The weather in Los Angeles today is weather('Los Angeles weather').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Who is the CEO of Apple?",The CEO of Apple is wikipedia('Apple CEO').
+Toolformer,"toolformer: enabled
+toolformer access: search, news
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Find the latest news on AI advancements.",The latest news on AI advancements can be found here: search('latest news on AI advancements').
+Toolformer,"toolformer: enabled
+toolformer access: request, news
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Extract the text content of the URL 'https://www.example.com/news/article-url'",The text content of the URL is: request('https://www.example.com/news/article-url')
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+What is the current US unemployment rate?US unemployment rate",The current US unemployment rate is wolfram('US unemployment rate').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+What are the main headlines for today?",Today's top headlines are: news('What are the top headlines today?').
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+Show the contents of the etc/hosts file on a Linux system.",The contents of the etc/hosts file on a Linux system are: shell('cat /etc/hosts').
+Toolformer,"toolformer: enabled
+toolformer access: weather, wikipedia
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+What's the weather like in Los Angeles and who is the mayor?",The weather in Los Angeles is: weather('weather in Los Angeles') and the mayor is: wikipedia('Mayor of Los Angeles').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+What are the largest volcanic eruptions in history?",The largest volcanic eruptions in history are wolfram('largest volcanic eruptions in history').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Compute the sum of the squares of the integers from 1 to 10","The sum of the squares of integers from 1 to 10 is python('sum(x**2 for x in range(1, 11))')"
+Toolformer,"toolformer: enabled
+toolformer access: request
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+Retrieve text content from a website using its URL.https://www.example.com",The text content of the specified website is request('https://www.example.com').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Solve the quadratic equation 2x^2 + 5x - 3 = 0.",The solutions for the quadratic equation 2x^2 + 5x - 3 = 0 are wolfram('solve 2x^2 + 5x - 3 = 0').
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Show some funny memes.","To view some funny memes, you can search search('funny memes')."
+Toolformer,"toolformer: enabled
+toolformer access: python, weather
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Get weather information for Paris and calculate the Fahrenheit equivalent of the current temperature","The weather in Paris is weather('What is the current weather in Paris?'). To convert the temperature to Fahrenheit, use this formula: python('9/5 * float(weather_temperature) + 32') where weather_temperature is the Celsius temperature from the weather API."
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+What was the temperature in Paris on July 14, 2019?","The temperature in Paris on July 14, 2019 was: weather('temperature in Paris on July 14, 2019')."
+Toolformer,"toolformer: enabled
+toolformer access: search, news
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+What is the latest news about Mars exploration?",Latest news about Mars exploration can be found through a search query: search('latest Mars exploration news')
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Find the top news story globally",The top news story globally is news('top news story globally').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Provide a summary of a famous company based on the input given.Tesla, Inc.","Tesla, Inc. is a multinational electric vehicle and clean energy company. Find out more: wikipedia('Tesla, Inc.')."
+Toolformer,"toolformer: enabled
+toolformer access: search, news
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Find the latest information on a specific cryptocurrency.What's the latest news on Ethereum?",Here's the latest information about Ethereum: search('latest news on Ethereum').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Convert the provided list of temperatures from Celsius to Fahrenheit.List of temperatures in Celsius: [23, 10, 5, -7]","Converted temperatures to Fahrenheit: python('[round(((x * (9/5)) + 32), 2) for x in [23, 10, 5, -7]]')."
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Check if the given number is prime or not.19","The number 19 is python('""prime"" if all(19 % i != 0 for i in range(2, int(19**0.5) + 1)) else ""not prime""')."
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+What was the significance of the Battle of Hastings?",The significance of the Battle of Hastings can be summarized as follows: wikipedia('Battle of Hastings significance').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+What is the population of Sweden?",The population of Sweden is wolfram('population of Sweden').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Tell me about Elon Musk",Here's a summary of Elon Musk's accomplishments and background: wikipedia('Elon Musk').
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+Show the list of environment variables in the terminal.",The list of environment variables in the terminal can be displayed by executing the command 'env': shell('env').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+What are the latest news headlines?",Here are the latest news headlines: news('latest news headlines').
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+How much memory is my system using?",Your system memory usage is shell('free -h').
+Toolformer,"toolformer: enabled
+toolformer access: request, wikipedia
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Extract text content from https://en.wikipedia.org/wiki/Artificial_intelligence.",The text content extracted from the Artificial Intelligence Wikipedia page is: request('https://en.wikipedia.org/wiki/Artificial_intelligence').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+What is the approximate surface temperature of the sun?",The approximate surface temperature of the sun is wikipedia('Sun surface temperature').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Calculate the sum of the geometric series with initial term 1, common ratio 0.5, and 10 terms.","The sum of the given geometric series is wolfram('sum of geometric series 1, 0.5, 10 terms')."
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Retrieve the latest news related to the given two topics.What are the top headlines about AI and climate change?","The top headlines about AI are: news('AI headlines'), and the top headlines about climate change are: news('climate change headlines')."
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Find the GCD of 56 and 98.",The GCD of 56 and 98 is wolfram('gcd of 56 and 98').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Give the summary of Christopher Nolan's Inception movie.",Inception is a 2010 science fiction film directed by Christopher Nolan. Here's a summary: wikipedia('Inception').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Find the prime factors of 42.",The prime factors of 42 are python('import sympy; sympy.factorint(42)').
+Toolformer,"toolformer: enabled
+toolformer access: request
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+Fetch the text from the page with the URL 'https://www.example.com/article'",Here is the text from the requested page: request('https://www.example.com/article').
+Toolformer,"toolformer: enabled
+toolformer access: request
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+Get the content of a New York Times article with the URL https://www.nytimes.com/example-article",The content of the New York Times article is request('https://www.nytimes.com/example-article').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Find the average of 12, 15, and 18.","The average of 12, 15, and 18 is python('sum([12, 15, 18]) / 3')."
+Toolformer,"toolformer: enabled
+toolformer access: request, wikipedia
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Retrieve the text from the Wikipedia page about quantum computing",Here is the content from the quantum computing page: request('https://en.wikipedia.org/wiki/Quantum_computing').
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+What is the weather like in London, England?London, England weather","The weather in London, England is: weather('London, England weather')."
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Will it rain in Seattle tomorrow?",The weather forecast for tomorrow in Seattle is: weather('Will it rain in Seattle tomorrow?').
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+What is the current temperature and weather conditions in the provided city?London",weather('London current temperature and weather conditions')
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+What is the molecular weight of caffeine?",The molecular weight of caffeine is: wolfram('molecular weight of caffeine')
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Get me the first 10 digits of Pi","The first 10 digits of Pi are: python('round(math.pi, 9)')."
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+List the first 10 prime numbers.","The first 10 prime numbers are python('import sympy; list(sympy.primerange(0, 30))')"
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Get information about World War I from Wikipedia.",Here is some information about World War I from Wikipedia: wikipedia('World War I').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+What's the latest news about the Apple company?",The latest news about Apple is news('latest news about Apple company').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+What are the nutritional facts of raw spinach?",The nutritional facts of raw spinach can be found at wolfram('nutritional facts of raw spinach').
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Find the weather information for New York City today",The weather information for New York City today is weather('What is the weather in New York City today?').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Show me the most recent news about artificial intelligence.",Here is the most recent news about artificial intelligence: news('latest news on artificial intelligence').
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Which website provides information about the technical specifications of smartphones?",You can find information about technical specifications of smartphones using search('smartphone technical specifications website').
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+What is the weather like in Boston tomorrow?",The weather in Boston tomorrow is weather('Boston weather tomorrow').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Calculate the distance between Earth and Mars in miles",The distance between Earth and Mars is wolfram('distance Earth Mars miles')
+Toolformer,"toolformer: enabled
+toolformer access: search, weather
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Tell me the weather in New York City today.weather in New York City today",The weather in New York City today can be found using the search engine: search('weather in New York City today').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Print the first 10 numbers in the Fibonacci sequence using Python","The first 10 numbers in the Fibonacci sequence are python('a, b = 0, 1; result = [];\nfor i in range(10): result.append(a); a, b = b, a + b;\nprint(result)')."
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+What are the chances of rain in London tomorrow?",The chances of rain in London tomorrow are weather('rain chance in London tomorrow').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Find out the latest news in cryptocurrency and show the top headline.","Here is the top cryptocurrency news headline: news('latest cryptocurrency news, top 1')"
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Find the current temperature in London.",The current temperature in London is weather('What is the current temperature in London?').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+What's the latest update on the Mars rover mission?",The latest update on the Mars rover mission is: news('Mars rover mission update').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Use Python to convert 150 Fahrenheit to Celsius",150 Fahrenheit is equal to python('(150 - 32) * 5/9') Celsius.
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+What is the chemical structure of caffeine and how does it affect the human body?","The chemical structure of caffeine is wolfram('chemical structure of caffeine'), and it affects the human body by wolfram('effects of caffeine on the human body')."
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Provide a summary of the Tesla company","Here's a summary of the Tesla company: wikipedia('Tesla, Inc.')"
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+What is the square of 8?",The square of 8 is python('8**2').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+What is the average of numbers 4, 8, 15, and 20?","The average of the numbers 4, 8, 15, and 20 is python('sum([4, 8, 15, 20]) / 4')."
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+What is the history of the Eiffel Tower?",Here's a brief history of the Eiffel Tower: wikipedia('Eiffel Tower history').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+What is the famous equation relating energy, mass, and the speed of light?","The famous equation relating energy, mass, and the speed of light is wolfram('energy mass speed of light equation')."
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+What was the highest stock price of Apple Inc. in the last 30 days?Apple Inc.",The highest stock price of Apple Inc. in the last 30 days was wolfram('highest AAPL stock in the last 30 days').
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Search for techniques to improve sleep quality.","To find techniques to improve sleep quality, use search('techniques to improve sleep quality')."
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Provide the weather forecast for the given location.What is the weather in New York today?",Today's weather in New York is: weather('What is the weather in New York today?').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+List the latest space exploration news",Here are the latest headlines on space exploration news: news('space exploration news')
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Find me search results related to 'The history of chess'.",Search results related to 'The history of chess' can be found by searching search('The history of chess').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Calculate the body mass index (BMI) of a person weighing 70 kg and 170 cm tall.",The BMI of a person weighing 70 kg and 170 cm tall is wolfram('BMI for 70 kg and 170 cm tall').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Get the current date and time",The current date and time is python('import datetime; datetime.datetime.now()').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+What was the population of New York City in 2020?",The population of New York City in 2020 can be found here: wolfram('New York City population 2020').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Calculate the sum of the list of numbers provided.4, 7, 12","The sum of the numbers 4, 7, and 12 is python('sum([4, 7, 12])')."
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Check the price of Apple shares",The current price of Apple shares is wolfram('Apple share price')
+Toolformer,"toolformer: enabled
+toolformer access: request, wikipedia
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Fetch the text content of the Wikipedia page about Artificial Intelligence.",The text content of the Wikipedia page about Artificial Intelligence can be found here: request('https://en.wikipedia.org/wiki/Artificial_intelligence').
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Find out the current weather and temperature in Paris, France.","The current weather and temperature in Paris, France are: weather('current weather and temperature in Paris, France')."
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Find the current weather in London and the temperature in Celsius.London weather and temperature",The current weather in London is weather('London weather today') and the temperature is weather('London temperature in Celsius').
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+Display the list of files with their sizes in the current directory.",Here is the list of files with their sizes in the current directory: shell('ls -lh').
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+Run the 'uname -a' command to display information about the operating system.",Here's the operating system information: shell('uname -a')
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+What's the melting point of gold?",The melting point of gold is wolfram('melting point gold').
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Who won the last edition of The Oscars?","To find out the most recent winner of The Oscars, you can search: search('last Oscars winner')"
+Toolformer,"toolformer: enabled
+toolformer access: request
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+Retrieve the text from the latest NASA blog post.",Retrieve the text from the latest NASA blog post here: request('https://blogs.nasa.gov/latest-blog-post-url').
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Find the current temperature in Los Angeles, California.Los Angeles","The current temperature in Los Angeles, California is weather('current temperature Los Angeles, California')."
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+How long is the Nile River?",The Nile River is: wolfram('length of Nile River').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Tell me about the history of the Amazon rainforest",Here's some information about the history of the Amazon rainforest: wikipedia('Amazon rainforest history')
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+How many lines are in the file located at /home/user/documents/testfile.txt?",There are shell('wc -l /home/user/documents/testfile.txt') lines in the file located at /home/user/documents/testfile.txt.
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Give me information about the Apollo 11 moon landing.","Apollo 11 was the space mission that landed the first humans on the Moon, on July 20, 1969, with astronauts Neil Armstrong and Buzz Aldrin. You can read more about the Apollo 11 mission here: wikipedia('Apollo 11')."
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Find the top news headlines about climate change.",Here are the top headlines regarding climate change: news('top climate change headlines')
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+What is the temperature in San Francisco?",The current temperature in San Francisco is: weather('What is the temperature in San Francisco?').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+What is the meaning of life, according to Hitchhiker's Guide to the Galaxy?","The meaning of life, according to Hitchhiker's Guide to the Galaxy, is wolfram('Meaning of life in Hitchhikers Guide to the Galaxy')."
+Toolformer,"toolformer: enabled
+toolformer access: weather, news
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+What is the weather like in Paris, and what are the top news stories?","The weather in Paris is weather('Weather in Paris?'), and the top news stories are news('top news stories')."
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Find the derivative of a given function with respect to x.x^3 + 3x^2 - 2x",The derivative of the function with respect to x is wolfram('derivative of x^3 + 3x^2 - 2x').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+What are the latest developments in the space exploration field?",The latest developments in the space exploration field can be found here: news('latest developments in space exploration').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Research the history of the English Premier League",You can find information on the history of the English Premier League here: wikipedia('History of the English Premier League').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+What is the history of the internet?",Here's some information about the history of the internet: wikipedia('history of the internet')
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+How many characters are in the string 'Artificial Intelligence'?","The number of characters in 'Artificial Intelligence' is python('len(""Artificial Intelligence"")')."
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Search for articles about artificial intelligence advancements in healthcare.",You can find articles about AI advancements in healthcare here: search('artificial intelligence advancements in healthcare').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Calculate the sum of 153 and 342.",The sum of 153 and 342 is python('153 + 342').
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Find a recipe for homemade pizza dough",Here's a recipe I found for homemade pizza dough: search('homemade pizza dough recipe').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Tell me the number of countries in the world and the most populous country","There are wolfram('number of countries in the world') countries in the world, and the most populous country is wolfram('most populous country')."
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Compute the sum of all numbers between 1 and 60.1, 60","The sum of all numbers between 1 and 60 is python('sum(range(1, 61))')."
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+What are the top 3 headlines in world news?",Here are the top 3 headlines in world news: news('top 3 world news')
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Who won the football game between Real Madrid and Barcelona last night?",Let me check the results of the Real Madrid vs Barcelona game last night: search('Real Madrid Barcelona game result last night').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Calculate the gcd of the given two numbers.42, 56","The gcd of 42 and 56 is wolfram('gcd(42, 56)')."
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+How far is it from Los Angeles to Las Vegas?",The distance between Los Angeles and Las Vegas is wolfram('distance from Los Angeles to Las Vegas').
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+How many words are in the text?Artificial intelligence is human-like intelligence exhibited by machines or software. It is a field of study that encompasses computers and other technologies to create intelligent systems that can perform tasks without human intervention.","There are shell('echo ""Artificial intelligence is human-like intelligence exhibited by machines or software. It is a field of study that encompasses computers and other technologies to create intelligent systems that can perform tasks without human intervention."" | wc -w') words in the text."
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Give me the current weather conditions in San Francisco.",The current weather conditions in San Francisco are weather('weather in San Francisco').
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+Get me the current list of files in the home directory.",Here is the current list of files in the home directory: shell('ls -al ~').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Get the latest news related to climate change.latest news on climate change",The latest news on climate change can be found in news('latest news on climate change').
+Toolformer,"toolformer: enabled
+toolformer access: request, wikipedia
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Retrieve the text content of a given webpage.https://www.wikipedia.org/",The text content of https://www.wikipedia.org/ can be found here: request('https://www.wikipedia.org/').
+Toolformer,"toolformer: enabled
+toolformer access: python, weather
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+What is the current temperature in Paris and convert it to Fahrenheit?","The current temperature in Paris is weather('current temperature in Paris')Â°C, which is python('round((weather('current temperature in Paris') * 9/5) + 32)')Â°F."
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+What is the weather like in Miami for the next seven days?",The weather in Miami for the next seven days is as follows: weather('Miami 7 day weather forecast').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+What do recent news headlines say about artificial intelligence?",Recent news headlines about artificial intelligence are: news('artificial intelligence headlines').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Who is the author of the play Romeo and Juliet?",The author of the play Romeo and Juliet is wikipedia('author of Romeo and Juliet').
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Find out how much it has rained in Seattle today.",The rainfall in Seattle today is weather('how much rain in Seattle today').
+Toolformer,"toolformer: enabled
+toolformer access: request, wikipedia
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Retrieve the content of Wikipedia's page about the Solar System.",Here's the content of Wikipedia's page about the Solar System: request('https://en.wikipedia.org/wiki/Solar_System').
+Toolformer,"toolformer: enabled
+toolformer access: search, weather
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+How is the weather in London affecting local events?","To find information about the weather in London and its impact on local events, use this query: search('London weather and its impact on local events')."
+Toolformer,"toolformer: enabled
+toolformer access: weather, news
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+How is the weather in Paris, and what are the top news headlines?","The weather in Paris is weather('Paris weather today'), and the top news headlines are: news('latest news headlines')."
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+How tall is Mount Everest?Mount Everest height",Mount Everest is wolfram('height of Mount Everest') tall.
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Translate 'Hello, how are you?' to French.","In French, 'Hello, how are you?' can be translated as wolfram('translate Hello, how are you to French')."
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+What are the top news stories about politics?",The top news stories about politics can be found here: news('top politics news stories').
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+Update the package list on a Ubuntu system.","To update the package list on a Ubuntu system, run this command: shell('sudo apt-get update')."
+Toolformer,"toolformer: enabled
+toolformer access: request, news
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Get the summary of the latest article on artificial intelligence from https://www.technologyreview.com.",The summary of the latest article on artificial intelligence is request('https://www.technologyreview.com') and news('latest article on artificial intelligence from Technology Review').
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Find the latest stock price for Apple Inc.",search('latest stock price for Apple Inc')
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+When was the last time Mount St. Helens erupted?Last eruption of Mount St. Helens",The last eruption of Mount St. Helens was: search('last eruption of Mount St. Helens')
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Calculate the area of a circle with a radius of 8 cm.",The area of a circle with a radius of 8 cm is: python('import math; 3.14159 * (8 ** 2)') square centimeters.
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Find information on the latest advancements in electric cars.",Here's what I found on the latest advancements in electric cars: search('Latest advancements in electric cars').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Calculate the distance traveled when moving at the speed of 30 mph for 2.5 hours.",The distance traveled can be calculated as: wolfram('30 mph * 2.5 hours')
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Calculate the tip for a given amount.45",The tip for a 45-dollar bill at a 15% rate is python('amount = 45; tip = amount * 0.15; tip').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Provide a summary of the American Revolutionary War",The American Revolutionary War was a significant event in history. Here's a snippet from Wikipedia: wikipedia('American Revolutionary War').
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+What is the weather like in Chicago tomorrow?",The weather in Chicago tomorrow is weather('Chicago weather tomorrow').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Find the latest news about global warming","To get the latest news about global warming, you can use the news tool. Try this query: news('latest news on global warming')."
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+What's the population of London?",The population of London is wolfram('population of London').
+Toolformer,"toolformer: enabled
+toolformer access: search, news
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Find the latest news about renewable energy.",You can find the latest news about renewable energy by performing a search('latest news about renewable energy').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Get the news headlines about a specific topic.What are the latest news regarding climate change?",The latest news regarding climate change are: news('climate change')
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Calculate the percentage of a given number like 150 out of 200.150 out of 200",The percentage of 150 out of 200 is python('(150 / 200) * 100').%
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+What are the top technology news headlines today?",The top technology news headlines today are news('top technology news today').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+How many days are in 2021?",There are wolfram('Number of days in 2021') days in 2021.
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Return the python code that sorts a list of numbers in ascending order.","To sort a list of numbers in ascending order, use this Python code: python('numbers = [3, 1, 4, 1, 5, 9, 2]; sorted_numbers = sorted(numbers); print(sorted_numbers)')"
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Find the golden ratio value.",The golden ratio value is: wolfram('golden ratio').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Convert 150 degrees Celsius to Fahrenheit.",150 degrees Celsius is equivalent to python('(150 * 9/5) + 32') degrees Fahrenheit.
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+What's the most viewed news article today?",The most viewed news article today is: news('most viewed news article today').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+What is the average lifespan of a human?",The average lifespan of a human is wolfram('average human lifespan').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Find the Python code to reverse a given text string.","To reverse a text string in Python, you can use slicing: python(""text = 'Hello, World!'; text[::-1]"")."
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+What is the distance between the two given cities and the approximate travel time by car?Los Angeles, San Francisco",The distance between Los Angeles and San Francisco is wolfram('distance between Los Angeles and San Francisco') and the approximate travel time by car is wolfram('travel time by car between Los Angeles and San Francisco').
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Check the temperature in Paris for Friday.",The temperature in Paris for Friday is weather('Paris temperature on Friday').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Calculate the percentage of 450 out of 900 using Python.","The percentage of 450 out of 900 is python('round((450 / 900) * 100, 2)')%."
+Toolformer,"toolformer: enabled
+toolformer access: search, news
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Search for the latest news on electric vehicles.",Search results for the latest news on electric vehicles: search('latest news on electric vehicles').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Find information about Issa Rae from Wikipedia.Who is Issa Rae?","Issa Rae is an American actress, writer, and producer. Here's a summary from Wikipedia: wikipedia('Issa Rae')."
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Give me information about the Eiffel Tower","The Eiffel Tower was designed by Gustave Eiffel and is a landmark in Paris, France. You can find more details here: wikipedia('Eiffel Tower')"
+Toolformer,"toolformer: enabled
+toolformer access: python, weather
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Determine the area of a circle with a radius of 7, and provide the current temperature in London.",The area of the circle with a 7 radius is python('import math; math.pi * 7**2'). The current temperature in London is weather('London current temperature').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Which country is currently dominating the news headlines?",The country dominating the news headlines is: news('which country is dominating the news?').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Calculate the golden ratio using the Fibonacci sequence","The golden ratio using the Fibonacci sequence is python('from sympy import fibonacci, limit; n = symbols(""n""); limit(fibonacci(n+1) / fibonacci(n), n, float(""inf""))')."
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+What are the latest international news headlines?",The latest international news headlines are news('latest international news').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram, weather
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Display today's weather for San Francisco and the current time there.",Today's weather for San Francisco is weather('What is the weather today in San Francisco?') and the current time there is wolfram('current time in San Francisco').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Tell me the boiling point of water in Kelvin.",The boiling point of water in Kelvin is: wolfram('boiling point of water in Kelvin').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+What's the latest news on electric vehicles?",Here are the top headlines about electric vehicles: news('latest electric vehicle news')
+Toolformer,"toolformer: enabled
+toolformer access: request
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+Retrieve the text from https://www.examplenews.com",Here is the text from https://www.examplenews.com: request('https://www.examplenews.com').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Tell me about the composer Ludwig van Beethoven.",Here is some information about composer Ludwig van Beethoven: wikipedia('Ludwig van Beethoven').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+What is the current status in COVID-19 vaccinations?",The current status on COVID-19 vaccinations is: news('COVID-19 vaccinations').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Provide a brief overview of a historical figure based on the input given.Isaac Newton","Isaac Newton was an English mathematician, physicist, and astronomer. wikipedia('Isaac Newton')."
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+What's the latest news about the Covid-19 vaccine?",Here is the latest news regarding the Covid-19 vaccine: news('latest news Covid-19 vaccine').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Give a brief description of the Battle of Gettysburg.",Here is a brief description of the Battle of Gettysburg: wikipedia('Battle of Gettysburg').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Give me a summary of the Battle of Stalingrad.",Here's a summary of the Battle of Stalingrad: wikipedia('Battle of Stalingrad')
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+What is the weather forecast for London this weekend?",The weather forecast for London this weekend is weather('London weekend weather forecast').
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Calculate the dot product of vectors A [2, 3, 4] and B [1, 1, 1]","The dot product of vectors A [2, 3, 4] and B [1, 1, 1] is python('A = [2, 3, 4]; B = [1, 1, 1]; sum(x * y for x, y in zip(A, B))')."
+Toolformer,"toolformer: enabled
+toolformer access: python
+A Python shell. Use this to execute python commands. Input should be a valid python command or script. If you expect output it should be printed out. Useful for all code, as well as math calculations.
+python(codetoexecute)
+Find the result of adding 87 and 215.",The result of adding 87 and 215 is python('87 + 215').
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+Find the current temperature and weather conditions in a given city.Chicago",The current temperature and weather conditions in Chicago are as follows: weather('Chicago weather now')
+Toolformer,"toolformer: enabled
+toolformer access: weather
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+What is the temperature in Los Angeles, California right now?","The temperature in Los Angeles, California right now is weather('temperature in Los Angeles, California')."
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+What is the exchange rate between USD and EUR?",You can find the current exchange rate between USD and EUR here: search('USD to EUR exchange rate').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+Find the derivative of the given mathematical function.3x^3 - 2x^2 + x",The derivative of the given function is wolfram('derivative of 3x^3 - 2x^2 + x').
+Toolformer,"toolformer: enabled
+toolformer access: news
+Use this when you want to get information about the top headlines of current news stories. The input should be a question in natural language that this API can answer.
+news(query)
+Check the latest headlines of New York Times?",The latest headlines of New York Times are news('New York Times headlines')
+Toolformer,"toolformer: enabled
+toolformer access: request, wikipedia
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Extract text from the Wikipedia page about AI",Here's the text from the AI Wikipedia page: request('https://en.wikipedia.org/wiki/Artificial_intelligence')
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+Find the output of the following command: echo 'Hello World'",The output of the command is: shell('echo Hello World')
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+Use the command 'ls -la' to get the list of files and folders in the current directory",The list of files and folders in the current directory: shell('ls -la').
+Toolformer,"toolformer: enabled
+toolformer access: search
+A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+search(query)
+Find out the most recent Linux kernel version.What's the latest version of Linux kernel?",The most recent Linux kernel version is: search('latest Linux kernel version').
+Toolformer,"toolformer: enabled
+toolformer access: request
+A portal to the internet. Use this when you need to get specific content from a site. Input should be a specific url, and the output will be all the text on that page.
+request(url)
+Find the ingredients list for chocolate chip cookies on https://www.cookie-recipes.com/chocolate-chip-cookies/",The ingredients list for chocolate chip cookies is request('https://www.cookie-recipes.com/chocolate-chip-cookies/').
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+What are the health benefits of turmeric?",Here are some health benefits of turmeric: wikipedia('Health benefits of turmeric')
+Toolformer,"toolformer: enabled
+toolformer access: wikipedia
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+Find a quick summary on the city of San FranciscoSan Francisco",Here is a summary of San Francisco: wikipedia('San Francisco').
+Toolformer,"toolformer: enabled
+toolformer access: weather, wikipedia
+Useful for when you want to get weather information from the OpenMeteo API. The input should be a question in natural language that this API can answer.
+weather(querywithlocation)
+A wrapper around Wikipedia. Useful for when you need to display general information about people, places, companies, historical events, or other subjects found in an encyclopedia, displays a snippet summary of the topic. Input should be a search query.
+wikipedia(query)
+What's the weather like in New York and can you give a summary of its history?",The weather in New York today is weather('What is the weather in New York today?') and a summary of its history is wikipedia('History of New York').
+Toolformer,"toolformer: enabled
+toolformer access: shell
+Executes commands in a terminal. Input should be valid commands, and the output will be any output from running that command.
+shell(shellcommand)
+Find the running processes on the computer using terminalps -ef",The running processes on your computer are: shell('ps -ef').
+Toolformer,"toolformer: enabled
+toolformer access: wolfram
+A wolfram alpha search engine. Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life. Input should be a search query.
+wolfram(query)
+What's 7 times 8?",7 times 8 is wolfram('7 times 8').
